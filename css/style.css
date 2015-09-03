@@ -62,3 +62,163 @@ allowing other columns in the section to wrap around */
   margin-left: 2%;
   margin-bottom: 20px;
 }
+
+/* media queries */
+/* if screen is 768px wide or smaller (tablets), we change
+the container class to 750px (~98%) wide
+ */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 972px;
+  }
+  .one-half {
+    width: 46%;
+  }
+  .one-third {
+    width: 29.33333%;
+  }
+  .one-quarter {
+    width: 21%;
+  }
+}
+
+
+/* media queries */
+/* if screen is 992px wide or smaller (laptops), we change
+the container class to 960px (97%) wide */
+
+
+
+/* media queries */
+/* if screen is 1200px wide or smaller (desktop), we change
+the container class to 1170 (~97%) wide */
+@media (min-width: : 1200px) {
+  .container {
+    width: : 1170px;
+  }
+}
+
+
+/* HEADER 
+from example video:;
+   color:#FFFFFF;
+   background: #34495E;
+   background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
+*/
+/* text color is white */
+header {
+  color: #ffffff;
+  /* hero background information from sketch file (right-click
+    on element name and choose Copy CSS Attributes to copy the 
+    element's attributes) */
+background: #435F65;
+background-image: linear-gradient(-206deg, 
+  rgba(95,129,163,0.50) 0%, #65605C 100%);
+}
+
+/* 1em padding on top and bottom, 0 padding on left and right */
+ header nav {
+   padding:1em 0;
+ }
+/* make sign in / sign out links on same line, align the 
+to the right side of screen, links should appear on right side */
+header nav ul {
+  display: inline;
+  text-align: right;
+  float: right;
+  margin: 0;
+}
+/* parent unordered list.
+removes bullets for sign in / sign out
+makes them on same line 
+with space between them */
+/* 0 margin on top and bottom, 15px margin on left and right */
+ header nav ul > li {
+   list-style-type: none;
+   display: inline-block;
+   margin: 0 15px;
+ }
+/* add white rounded box (border) around sign up (class=btn-outline) */
+/* 10px padding on top and bottom, 15px padding on left and right */
+ header nav ul > li.btn-outline {
+   padding:10px 15px;
+   border: 2px solid #FFFFFF;
+   border-radius: 4px;
+ }
+ /* changes sign up to white background when hover on it */
+  header nav ul > li.btn-outline:hover {
+   background: #FFFFFF;
+ }
+  /* changes sign in & sign out links to white no underline */
+  header nav ul > li > a {
+   color: #FFFFFF;
+   text-decoration: none;
+ }
+ /* when hover over sign up link, the text
+changes color */
+ header nav ul > li.btn-outline:hover > a {
+   /* example video    color: #34495E */
+   color: #2D2B2B;
+ }
+
+ /* class=hero of header */
+ /* centers text, looks like a block, everything to 
+ flow underneath it*/
+ header .hero {
+   text-align: center;
+   display: block;
+   position: relative;
+ }
+ /* title header text-size is very large now with 
+ more space above it */
+ header .hero h1 {
+   font-size: 40px;
+   font-weight: normal;
+   margin-top: 40px;
+   margin-bottom: 40px;
+ }
+  /* company name header text-size is larger than other h1
+  overrides the h1 margin-top attribute listed above */
+ #companyname  {
+   font-size: 80px;
+   font-weight: normal;
+   margin: 0;
+   font-variant: small-caps;
+ }
+ /* hero paragraph font-size also larger with more space between lines
+ font-weight light  
+ margin to top 10, 0 right/left, 40 on bottom */
+  header .hero p {
+   font-size: 22px;
+   line-height: 26px;
+   font-weight: 100;
+   margin: 10px 0 40px;
+ }
+ /* laptop computer image moved down a bit
+ right/left sides to auto (centers it), bottom margin 0 */
+  header .hero img {
+   display: block;
+   margin-top: 3em;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 0;
+ }
+
+ /* BUTTONS */
+ .btn {
+   border-radius: 7px; /* rounded corners */
+   color: #FFFFFF; /* white font */
+   font-family: 'Bree Serif', serif;
+   font-size: 18px;
+   /*font-weight: 700; bold font */
+   text-decoration: none; /* no link underline */
+   padding: 10px 30px; /* 10px top/bottm and 30px right/left */
+   background: #B27846; /* example video #2ECC71 */
+   border: 1px solid #B27846; /* example video #2ECC71; */
+   box-shadow: 0px 4px 0px 2px #ffffff; /* example video #22894E; */
+ }
