@@ -63,15 +63,37 @@ allowing other columns in the section to wrap around */
   margin-bottom: 20px;
 }
 
+
+
 /* media queries */
-/* if screen is 768px wide or smaller (tablets), we change
-the container class to 750px (~98%) wide
+/* if screen is 320px wide (iPhone portrait) or larger,
+change container class to 310px wide
+http://www.websitedimensions.com/
+ */
+
+
+/* media queries */
+/* if screen is 768px wide (iPad portrait) or larger, we change
+the container class to 750px wide
+http://www.websitedimensions.com/
+Column attributes are not specified unless the screen 
+is at least 992px wide so if the screen is smaller than that
+we won't have any columns
  */
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
+
+
+
+/* media queries */
+/* if screen is 992px wide or larger (laptops), we change
+the container class to 960px wide 
+Also, specify the width of columns for all 
+screens 992px or larger
+*/
 @media (min-width: 992px) {
   .container {
     width: 972px;
@@ -86,22 +108,35 @@ the container class to 750px (~98%) wide
     width: 21%;
   }
 }
-
-
 /* media queries */
-/* if screen is 992px wide or smaller (laptops), we change
-the container class to 960px (97%) wide */
-
-
-
-/* media queries */
-/* if screen is 1200px wide or smaller (desktop), we change
-the container class to 1170 (~97%) wide */
-@media (min-width: : 1200px) {
+/* if screen is 1200px wide or larger (desktops), we change
+the container class to 1170 wide */
+@media (min-width: 1200px) {
   .container {
-    width: : 1170px;
+    width: 1170px;
   }
 }
+/* media queries */
+/* if screen is 1920px wide or larger, we change
+the container class to 1885px wide
+http://www.websitedimensions.com/ */
+@media (min-width: 1920px) {
+  .container {
+    width: 1885px;
+  }
+}
+/* media queries */
+/* if screen is 2560px wide or larger, we change
+the container class to 2525px wide
+http://www.websitedimensions.com/ */
+@media (min-width: 2560px) {
+  .container {
+    width: 2525px;
+  }
+
+}
+
+
 
 
 /* HEADER 
@@ -222,3 +257,72 @@ changes color */
    border: 1px solid #B27846; /* example video #2ECC71; */
    box-shadow: 0px 4px 0px 2px #ffffff; /* example video #22894E; */
  }
+
+
+
+
+ /* BENEFITS (a.k.a. features) section */
+
+.benefits {
+  color: #ffffff; /* white text */
+  /* hero background information from sketch file (right-click
+    on element name and choose Copy CSS Attributes to copy the 
+    element's attributes) */
+background: #65605C;
+}
+
+
+
+
+/* PRICING */
+.pricing .centeralign {
+  text-align: center;
+}
+
+
+
+
+/* TESTIMONIALS SECTION */
+/* Background color Mask: */
+.testimonials {
+/* Mask: */
+background: #435F65;
+background-image: linear-gradient(45deg, #65605C 0%, rgba(95,129,163,0.50) 100%);
+/* image:
+opacity: 0.3; */
+}
+.testimonials .centeralign {
+  text-align: center;
+}
+.testimonials blockquote {
+  text-align: center;
+}
+
+
+
+
+
+/* REMINDER TO SIGN UP SECTION */
+.remindersignup {
+    text-align: center;
+}
+
+
+
+
+
+
+/* FOOTER */
+footer {
+  color: #ffffff; /* white text */
+  /* hero background information from sketch file (right-click
+    on element name and choose Copy CSS Attributes to copy the 
+    element's attributes) */
+background: #65605C;
+}
+.middle-footer-block {
+    text-align: center;
+}
+.right-footer-block {
+    text-align: right;
+}
