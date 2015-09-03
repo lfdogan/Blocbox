@@ -1,0 +1,64 @@
+/*tells browser to hide anything that goes off
+ of the left/right side of browser window */
+html, body {
+  overflow-x:hidden;
+}
+
+body {
+  font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 100;
+}
+
+/* grid */
+/* center content */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+/* grid */
+/* pseudo elements add a table before and after 
+using a clearfix hack to help with spacing each 
+"container" appropriately */
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+
+/* grid */
+.container:after {
+  clear:both;
+}
+
+/* grid */
+/* provide 2% padding on left and right margins for all */
+/* columns are set to float left which pushes them to the left side,
+allowing other columns in the section to wrap around */
+.one-half, .one-third, .one-quarter {
+  width: 96%;
+  float:left;
+  position: relative;
+  min-height: 1px;
+  margin-top: 0;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 20px;
+}
