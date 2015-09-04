@@ -95,18 +95,13 @@ Also, specify the width of columns for all
 screens 992px or larger
 */
 @media (min-width: 992px) {
-  .container {
-    width: 972px;
-  }
-  .one-half {
-    width: 46%;
-  }
-  .one-third {
-    width: 29.33333%;
-  }
-  .one-quarter {
-    width: 21%;
-  }
+  .container {width: 972px;}
+  .one-half {width: 46%;}
+  .one-third {width: 29.33333%;}
+  .one-quarter {width: 21%;}
+  .fifteen-percent {width: 15%;}
+  .thirtyone-percent {width: 31%;}
+
 }
 /* media queries */
 /* if screen is 1200px wide or larger (desktops), we change
@@ -262,22 +257,106 @@ changes color */
 
 
  /* BENEFITS (a.k.a. features) section */
-
 .benefits {
+  padding: 40px;
   color: #ffffff; /* white text */
   /* hero background information from sketch file (right-click
     on element name and choose Copy CSS Attributes to copy the 
     element's attributes) */
-background: #65605C;
+   background: #65605C; 
+   /* position: relative; */
+  /* display: block; */
 }
+ .benefits i {
+   font-size:60px;
+   margin:0;
+   vertical-align: middle;
+ }
+ .BenefitsCenterAlign {
+  padding: 10px;
+  text-align: center;
+}
+table p {
+  text-align:left;
+}
+
+
+.additionalFeatures {
+  padding-top: 10px;
+  position: relative;
+  background: #65605C;
+  overflow: hidden;
+  text-align: center;
+}
+
+.additionalFeatures:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    background-image: url("../images/office.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+
 
 
 
 
 /* PRICING */
+.pricing {
+  padding:40px;
+}
 .pricing .centeralign {
   text-align: center;
 }
+ .pricing h3 {
+  /* plan name */
+  color: #B27846;
+  text-shadow: 1px 1px #ffffff;
+ }
+
+ .pricing h2 {
+  /* price */
+  color: #2D2B2B;
+ }
+
+ .pricing li {
+   color: #FFFFFF;
+ }
+
+ .pricing ul {
+   margin:0 auto;
+   padding:2em 0;
+ }
+ .pricing ul li {
+   list-style-type: none;
+ }
+
+ .box {
+   padding:0 15px 15px;
+   background: #88ABB2;
+   box-shadow: 0px 12px 4px 0px rgba(0,0,0,0.20);
+   position: relative;
+   margin-top: 25px;
+   min-height: 100px;
+ }
+ .pricing td {
+    width:25%;
+    text-align: left;}
+ .pricing h2 {text-align: center;}
 
 
 
@@ -285,11 +364,19 @@ background: #65605C;
 /* TESTIMONIALS SECTION */
 /* Background color Mask: */
 .testimonials {
-/* Mask: */
-background: #435F65;
-background-image: linear-gradient(45deg, #65605C 0%, rgba(95,129,163,0.50) 100%);
-/* image:
-opacity: 0.3; */
+  /* background */
+background: #435F65 url("../images/testimonials-background.png")
+ top center no-repeat;
+/* gradient */
+background: url("../images/testimonials-background.png") top
+center no-repeat linear-gradient(45deg, 
+  #65605C 0%, rgba(95,129,163,0.50) 100%);
+background-size: cover;
+text-align: center;
+padding: 4em 0; /* 4em top and bottom */
+}
+
+
 }
 .testimonials .centeralign {
   text-align: center;
@@ -304,6 +391,7 @@ opacity: 0.3; */
 
 /* REMINDER TO SIGN UP SECTION */
 .remindersignup {
+  padding:40px;
     text-align: center;
 }
 

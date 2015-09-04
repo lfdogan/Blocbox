@@ -59,47 +59,76 @@
 
 <main role="main">
 
-<!-- Features 
+<!-- BENEFITS Features 
   first half are add items, second half is an image 
   second section is the additional items
   -->
 <section class="benefits">
 
-<div class="container">
+
+<div class="mainFeatures"><!-- main features columns-->
+  <div class="one-half">
+    <table class="BenefitsCenterAlign">
+    <tr>
+      <td class="fifteen-percent">
+        <i class="fa fa-file-o"></i>
+        <h3>Create notes</h3>
+      </td>
+      <td class="thirtyone-percent">
+        <p>Using Markdown, you can create simple text-based documents to save and share. You can collaborate with others to write and edit content.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="BenefitsCenterAlign">
+        <i class="fa fa-picture-o"></i>
+        <h3>Save images</h3>
+      </td>
+      <td>
+        <p>Are there images you find interesting enough to save? Now you have a way to organize and store those within Blocbox.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="BenefitsCenterAlign">
+        <i class="fa fa-link"></i>
+        <h3>Add links</h3>
+      </td>
+      <td>
+        <p>Forget bookmarking sites in your browser. With Blocbox, you can add links, group them and view them from any computer.</p>
+      </td>
+    </tr>
+    </table>
+  </div><!--left half-->
 <div class="one-half">
-  <ul>
-    <li>
-    <h3>Create notes</h3>
-    <p>Using Markdown, you can create simple text-based documents to save and share. You can collaborate with others to write and edit content.</p>
-    </li>
-    <li>
-      <h3>Save images</h3>
-      <p>Are there images you find interesting enough to save? Now you have a way to organize and store those within Blocbox.</p>
-    </li>
-    <li>
-      <h3>Add links</h3>
-      <p>Forget bookmarking sites in your browser. With Blocbox, you can add links, group them and view them from any computer.</p>
-    </li>
-  </ul>
-</div>
-<div class="one-half">
-  <img src="images/computer.jpg" alt="computer"/>
-</div>
-</div>
+  <img src="images/computer.jpg" alt="computer" />
+</div><!--end right half-->
+</div><!--end main features columns-->
 
 <div class="container">
-  <img src="images/office.jpg" alt="office"/>
-<div id="additionalfeatures">
-  <div class="one-quarter"><h3>Share with collaborators</h3></div>
-  <div class="one-quarter"><h3>Organize into boxes</h3></div>
-  <div class="one-quarter"><h3>Assign favorites</h3></div>
-  <div class="one-quarter"><h3>Assign tags</h3></div>
+<div class="additionalFeatures"><!--four columns-->
+  <div class="one-quarter">
+    <i class="fa fa-group"></i>
+    <h3>Share with collaborators</h3></div>
+  <div class="one-quarter">
+  <i class="fa fa-inbox"></i>
+    <h3>Organize into boxes</h3></div>
+  <div class="one-quarter">
+  <i class="fa fa-heart"></i>
+    <h3>Assign favorites</h3></div>
+  <div class="one-quarter">
+  <i class="fa fa-tag"></i>
+    <h3>Assign tags</h3></div>
+</div><!--end additional features section-->
 </div>
-</div>
+
 </section>
 
 
-<!-- Pricing 
+
+
+
+
+
+<!-- PRICING 
   first half is image, second half is three tiers
   -->
 <section class="pricing">
@@ -108,34 +137,46 @@
     <p>We have many options to fit your needs. It's free to try out for 30 days and you can always change your plan once you've signed up. Here are the different features of each plan:</p>
     <a href="SignUp.html" class="btn">Start Your Free Trial</a>
   </div>
+
   <div class="container">
-  <div class="one-half"><!--img src="images/computer.jpg"--></div>
+  <div class="one-half">image<!--img src="images/computer.jpg"--></div>
   <div class="one-half">
+    <div class="box"><table><tr>
+      <td><h3>CASUAL</h3><h2>FREE</h2></td>
+      <td><ul><li>Up to 5 boxes</li>
+        <li>Up to 10 collaborators</li>
+        <li>2GB of storage</li></ul></td></tr></table>
+      </div>
+      <div class="box"><table><tr>
+      <td><h3>PROFESSIONAL</h3><h2>$5/month</h2></td>
+      <td>
+        <ul><li>Unlimited boxes</li>
+        <li>Up to 20 collaborators</li>
+        <li>5GB of storage</li>
+        <li>Real-time collaboration</li></ul>
+      </td></tr>
+      </table></div>
+      <div class="box">
     <table>
-    <tr><td><h3>CASUAL</h3><h2>FREE</h2></td>
+    <tr>
+      <td><h3>EXPERT</h3><h2>$10/month</h2></td>
       <td>
-      <ul><li>Up to 5 boxes</li>
-      <li>Up to 10 collaborators</li>
-      <li>2GB of storage</li></ul>
+        <ul><li>Unlimited boxes</li>
+        <li>Up to 20 collaborators</li>
+        <li>Unlimited storage</li>
+        <li>Real-time collaboration</li></ul>
       </td></tr>
-    <tr><td><h3>PROFESSIONAL</h3><h2>$5/month</h2></td>
-      <td>
-      <ul><li>Unlimited boxes</li>
-      <li>Up to 20 collaborators</li>
-      <li>5GB of storage</li>
-      <li>Real-time collaboration</li></ul>
-      </td></tr>
-    <tr><td><h3>EXPERT</h3><h2>$10/month</h2></td>
-      <td>
-      <ul><li>Unlimited boxes</li>
-      <li>Up to 20 collaborators</li>
-      <li>Unlimited storage</li>
-      <li>Real-time collaboration</li></ul>
-      </td></tr>
-    </table>
-  </div>
-  </div>
+    </table></div>
+  </div><!--end 2nd half-->
+  </div><!--end container-->
+
 </section>
+
+
+
+
+
+
 
 <!-- Testimonials centered
   -->
@@ -161,6 +202,9 @@
 
 
 
+
+
+
 <!--Reminder to Sign up -->
 <section class="remindersignup">
   <div class="container">
@@ -171,7 +215,16 @@
    </div>
 </section>
 
+
+
+
+
+
 </main>
+
+
+
+
 
 <!-- Footer -->
 <!-- Footer Nav Bar: first third is logo. middle third links, last third is Sign In/Out links -->
@@ -202,6 +255,4 @@
 
 
  </body>
-
-
  </html>
