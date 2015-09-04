@@ -268,6 +268,13 @@ header nav ul > li.btn-outline:hover > a {
    margin-right: auto;
    margin-bottom: 0;
  }
+.hero .laptop-screenshot {
+   display: inline-block;
+}
+
+
+
+
 
 
  /* BUTTONS */
@@ -290,6 +297,11 @@ header nav ul > li.btn-outline:hover > a {
 
 
 
+
+
+
+
+
  /* BENEFITS (a.k.a. features) section */
 .benefits {
   padding: 40px;
@@ -303,7 +315,7 @@ header nav ul > li.btn-outline:hover > a {
 }
 .benefits .container {
   text-align: center;
-    padding: 5px;
+  padding: 5px;
 }
 .benefits i {
    font-size:60px;
@@ -328,23 +340,23 @@ header nav ul > li.btn-outline:hover > a {
   text-align: center;
 }
 .benefits .additionalFeatures:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.3;
-    background-image: url("../images/office.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.3;
+  background-image: url("../images/office.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
 
@@ -397,29 +409,29 @@ header nav ul > li.btn-outline:hover > a {
  }
 
 
- .box {
-   margin-top: 10px; /* white space between boxes */
-   padding-left: 10px; /* space between box edge and text */
+.box {
+  margin-top: 10px; /* white space between boxes */
+  padding-left: 10px; /* space between box edge and text */
 /* from example video:
-   box-shadow: 0px 12px 4px 0px rgba(0,0,0,0.20);*/
-   position: relative;
-   min-height: 100px;
+  box-shadow: 0px 12px 4px 0px rgba(0,0,0,0.20);*/
+  position: relative;
+  min-height: 100px;
 /* from sketch: price box: */
   background: #88ABB2; /* light teal */
   box-shadow: 4px 4px 4px 0px #B27846; /*orange */
 
  }
 .pricing td {
-    width:25%;
-    text-align: left;
+  width:25%;
+  text-align: left;
   }
 .pricing h2 {
   text-align: center;
 }
 .pricing .small {
-   font-size: 12px;
-   line-height: 15px;
-   text-align: center;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
  }
 
 
@@ -442,48 +454,65 @@ header nav ul > li.btn-outline:hover > a {
   #65605C 0%, rgba(95,129,163,0.50) 100%); /* brown */
   background-size: cover;
 }
+.testimonials .back-triangle img {
+  height: 35px;
+  width: 35px;
+  float: right; /* location in the column */
+  margin-top: 100px;
+  margin-right: 10px;
+ }
+ .testimonials .next-triangle img {
+  height: 35px;
+  width: 35px;
+  float: left; /* location in the column */
+  margin-top: 100px;
+  margin-left: 10px;
+ }
  .testimonials blockquote {
-   font-style: italic;
-   background: #FFFFFF; /* WHITE */
-   position: relative;
-   padding: 30px;
-   color:  #435F65; /* teal */
-   width: auto;
-   margin: 0;
-   border-radius: 30px;
+  font-style: italic;
+  background: #FFFFFF; /* WHITE */
+  position: relative;
+  padding: 30px;
+  color:  #435F65; /* teal */
+  width: auto;
+  margin: 0;
+  border-radius: 30px;
  }
  /* pseudo class used for triangle at bottom of blockquote bubble */
  /* http://apps.eky.hk/css-triangle-generator/ */
- .testimonials blockquote:after {
-   top: 100%;
-   left: 13%;
-   border: solid transparent;
-   content: " "; /* empty content */
-   height: 0;
-   width: 0;
-   position: absolute;
-   pointer-events: none;
-   border-top-color: #FFFFFF; /* white, same as background */
-   border-width: 10px;
-   margin-left: -10px;
+.testimonials blockquote:after {
+  top: 100%;
+  left: 13%;
+  border: solid transparent;
+  content: " "; /* empty content */
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #FFFFFF; /* white, same as background */
+  border-width: 10px;
+  margin-left: -10px;
  }
-  .testimonials img {
-   height: 65px;
-   width: 65px;
-   border-radius: 50%; /* circle */
-   float: left; /* to the left in the column */
-   display: inline-block; /* image and text side-by-side */
-   margin-top: 10px;
-   margin-right: 10px;
-   margin-left: 6px;
+.testimonials .testimonial-center img {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%; /* circle */
+  float: left; /* location in the column */
+  display: inline-block; /* image and text side-by-side */
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 6px;
  }
-  .testimonials p.name {
-   float: left;
-   display: inline-block; /* image and text side-by-side */
-   text-align: left;
-   font-size: 14px;
-   margin-top: 25px;
+.testimonials p.name {
+  float: left;
+  display: inline-block; /* image and text side-by-side */
+  text-align: left;
+  font-size: 14px;
+  margin-top: 25px;
  }
+
+
+
 /* DOCUMENT COLORS:
   #B27846 orange 
   #2D2B2B near-black
