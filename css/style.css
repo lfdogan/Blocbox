@@ -80,8 +80,6 @@ allowing other columns in the section to wrap around */
 change container class to 310px wide
 http://www.websitedimensions.com/
  */
-
-
 /* media queries */
 /* if screen is 768px wide (iPad portrait) or larger, we change
 the container class to 750px wide
@@ -95,9 +93,6 @@ we won't have any columns
     width: 750px;
   }
 }
-
-
-
 /* media queries */
 /* if screen is 992px wide or larger (laptops), we change
 the container class to 960px wide 
@@ -111,7 +106,6 @@ screens 992px or larger
   .one-quarter {width: 21%;}
   .fifteen-percent {width: 15%;}
   .thirtyone-percent {width: 31%;}
-
 }
 /* media queries */
 /* if screen is 1200px wide or larger (desktops), we change
@@ -151,7 +145,7 @@ header {
   /* Top Nav Rectangle: */
   background: #65605C; /* brown */
 }
-
+header .one-third {margin-bottom: 5px;}
 /* 1em padding on top and bottom, 0 padding on left and right */
 /* affects all nav elements in header */
 header nav {
@@ -282,7 +276,7 @@ header nav ul > li.btn-outline:hover > a {
   /*from Sketch....*/
   /* Rectangle: */
   background: #B27846; /*orange */
-  box-shadow: 4px 4px 4px 0px #FFFFFF;
+  box-shadow: 4px 4px 4px 0px #FFFFFF; /* white */
   border-radius: 11px; /* rounded corners */
   padding: 10px;
   /* text: Start Your Free Tria: */
@@ -399,7 +393,9 @@ header nav ul > li.btn-outline:hover > a {
  .pricing li {
    color: #FFFFFF; /* white */
  }
-
+.pricing .btn {
+  box-shadow: 4px 4px 4px 0px #88ABB2; /* light teal */
+}
  .pricing ul {
    margin:0 auto;
    padding:2em 0;
@@ -407,8 +403,6 @@ header nav ul > li.btn-outline:hover > a {
  .pricing ul li {
    list-style-type: none;
  }
-
-
 .box {
   margin-top: 10px; /* white space between boxes */
   padding-left: 10px; /* space between box edge and text */
@@ -419,7 +413,6 @@ header nav ul > li.btn-outline:hover > a {
 /* from sketch: price box: */
   background: #88ABB2; /* light teal */
   box-shadow: 4px 4px 4px 0px #B27846; /*orange */
-
  }
 .pricing td {
   width:25%;
@@ -513,6 +506,20 @@ header nav ul > li.btn-outline:hover > a {
 
 
 
+
+
+/* REMINDER TO SIGN UP SECTION */
+.remindersignup {
+  padding: 40px;
+  text-align: center;
+}
+.remindersignup p {margin-bottom:40px;}
+.remindersignup .btn {
+  box-shadow: 4px 4px 4px 0px #88ABB2; /* light teal */
+}
+
+
+
 /* DOCUMENT COLORS:
   #B27846 orange 
   #2D2B2B near-black
@@ -524,30 +531,76 @@ header nav ul > li.btn-outline:hover > a {
 
 
 
-
-
-
-/* REMINDER TO SIGN UP SECTION */
-.remindersignup {
-  padding:40px;
-  text-align: center;
-}
-
-
-
-
-
 /* FOOTER */
 footer {
-  color: #ffffff; /* white text */
-  /* hero background information from sketch file (right-click
-    on element name and choose Copy CSS Attributes to copy the 
-    element's attributes) */
-background: #65605C; /* brown */
+  background-color: #65605C; /* brown */
+  color: #FFFFFF; /* white text */
+  height: 150px; /* section height */
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  /* from video example:
+  background-image: linear-gradient(to top,
+     #3498DB 0%, #3498DB 50%, #34495E 50%, #34495E 100%);*/
+/* gradient for ALL (not really since we have a media query below)
+    screen sizes:
+    first color is bottom of bottom box
+    second color is top of bottom box
+    third color is bottom of top box
+    fourth color is top of top box */
 }
-.middle-footer-block {
-    text-align: center;
-}
-.right-footer-block {
+footer .one-third {margin-bottom: 0;} /*not sure if this does anything*/
+/* paragraph (copyright info) and 
+  navigation unordered list (center links)
+  become smaller & centered, top 10px margin, auto (center) */
+footer p, footer nav ul {
+  font-size: 14px;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+ }
+ /* navigation unordered list items (center links)
+  remove bullets, display in a line */
+footer nav ul li{
+   list-style-type: none;
+   display: inline;
+ }
+ /* navigation unordered list items that are anchors (center links) 
+  change default color, remove default underline */
+footer nav ul li a {
+   color: #FFFFFF;
+   text-decoration: none;
+ }
+/* logo: */
+footer .right-footer-block {
+  text-align: center;
+  display: block;
+ }
+/* media query for screens at least 992 pixels wide: */
+@media (min-width: 992px){
+  /* gradient 
+    first color is bottom of third box
+    second color is top of third box
+    third color is bottom of first/second box
+    fourth color is top of first/second box */
+  footer{
+    background-color: #65605C; /* brown */
+    height: 100px;
+   }
+   /* paragraph (copyright info) and 
+  navigation unordered list (center links)
+  become left aligned */
+  footer p, footer nav ul{
+    padding: 2em 0;
+    text-align: left;
+  }
+/* logo: */
+  footer .right-footer-block{
     text-align: right;
-}
+    display: block;
+    vertical-align: center;
+   }
+ }
