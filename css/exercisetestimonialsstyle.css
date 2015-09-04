@@ -1,0 +1,524 @@
+/* DOCUMENT COLORS:
+  #B27846 orange 
+  #2D2B2B near-black
+  #435F65 teal
+  #FFFFFF white
+  #65605C brown
+  #88ABB2 light teal
+   */
+
+
+
+
+/*tells browser to hide anything that goes off
+ of the left/right side of browser window */
+html, body {
+  overflow-x:hidden;
+}
+
+body {
+  font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
+  color: #435F65; /* teal text */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+}
+
+h2 {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+p {
+  line-height: 19px;
+  font-weight: 100;
+}
+
+/* grid */
+/* center content */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+/* grid */
+/* pseudo elements add a table before and after 
+using a clearfix hack to help with spacing each 
+"container" appropriately */
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+
+/* grid */
+.container:after {
+  clear:both;
+}
+
+/* grid */
+/* provide 2% padding on left and right margins for all */
+/* columns are set to float left which pushes them to the left side,
+allowing other columns in the section to wrap around */
+.one-half, .one-third, .one-quarter {
+  width: 96%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  margin-top: 0;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 20px;
+}
+
+
+
+/* media queries */
+/* if screen is 320px wide (iPhone portrait) or larger,
+change container class to 310px wide
+http://www.websitedimensions.com/
+ */
+
+
+/* media queries */
+/* if screen is 768px wide (iPad portrait) or larger, we change
+the container class to 750px wide
+http://www.websitedimensions.com/
+Column attributes are not specified unless the screen 
+is at least 992px wide so if the screen is smaller than that
+we won't have any columns
+ */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+
+
+/* media queries */
+/* if screen is 992px wide or larger (laptops), we change
+the container class to 960px wide 
+Also, specify the width of columns for all 
+screens 992px or larger
+*/
+@media (min-width: 992px) {
+  .container {width: 972px;}
+  .one-half {width: 46%;}
+  .one-third {width: 29.33333%;}
+  .one-quarter {width: 21%;}
+  .fifteen-percent {width: 15%;}
+  .thirtyone-percent {width: 31%;}
+
+}
+/* media queries */
+/* if screen is 1200px wide or larger (desktops), we change
+the container class to 1170 wide */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* media queries */
+/* if screen is 1920px wide or larger, we change
+the container class to 1885px wide
+http://www.websitedimensions.com/ */
+@media (min-width: 1920px) {
+  .container {
+    width: 1885px;
+  }
+}
+/* media queries */
+/* if screen is 2560px wide or larger, we change
+the container class to 2525px wide
+http://www.websitedimensions.com/ */
+@media (min-width: 2560px) {
+  .container {
+    width: 2525px;
+  }
+
+}
+
+
+/* HEADER */
+header {
+  color: #FFFFFF; /* white text */
+  /* information from sketch file (right-click
+    on element name and choose Copy CSS Attributes to copy the 
+    element's attributes) */
+  /* Top Nav Rectangle: */
+  background: #65605C; /* brown */
+}
+
+/* 1em padding on top and bottom, 0 padding on left and right */
+/* affects all nav elements in header */
+header nav {
+   padding: 1em 0;
+ }
+/* make sign in / sign out links on same line, align the 
+to the right side of screen, links should appear on right side */
+/* affects all unordered lists in all nav elements of header */
+header nav ul {
+  display: inline;
+  text-align: right;
+  float: right;
+  margin: 0;
+}
+/* parent unordered list.
+removes bullets for sign in / sign out
+makes them on same line 
+with space between them */
+/* 0 margin on top and bottom, 15px margin on left and right */
+/* affecting all list items that are direct (first rather than all)
+children of all unordered lists in the nav of header*/
+header nav ul > li {
+   list-style-type: none;
+   display: inline-block;
+   margin: 0 15px;
+ }
+/* add white rounded box (border) around sign up (class=btn-outline) */
+/* 10px padding on top and bottom, 15px padding on left and right */
+/* affects all list items with class of button-outline that are direct
+descendents of the unordered lists in nav elements of header */
+header nav ul > li.btn-outline {
+   padding:10px 15px;
+   border: 2px solid #FFFFFF; /* white */
+   border-radius: 4px;
+ }
+ /* changes sign up to white background when hover on it */
+/* affects the hover status of all list items with class of 
+button-outline that are direct
+descendents of the unordered lists in nav elements of header */
+header nav ul > li.btn-outline:hover {
+   background: #FFFFFF; /* white */
+ }
+  /* changes sign in & sign out links to white no underline */
+  /* affects all anchor elements that are direct descendents
+  of list items which are direct descendents of any unordered 
+  list within the nav elements within the header */
+header nav ul > li > a {
+   color: #FFFFFF; /* white */
+   text-decoration: none;
+ }
+ /* when hover over sign up link, the text changes color */
+header nav ul > li.btn-outline:hover > a {
+   /* example video    color: #34495E */
+  color: #2D2B2B; /* near-black */
+ }
+
+
+
+/* HERO */
+/* from example video:;
+   color:#FFFFFF;
+   background: #34495E;
+   background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
+*/
+ /* centers text, looks like a block, everything to 
+ flow underneath it*/
+.hero {
+  text-align: center;
+  color: #ffffff; /* white text */
+  padding: 4em 0; /* 4em top and bottom */
+  display: block;
+  position: relative;
+  background: #435F65 url("../images/HeroBackground.jpg") 
+  top center no-repeat; /* teal */
+  /* gradient */
+  background: url("../images/HeroBackground.jpg") top
+  center no-repeat linear-gradient(45deg, 
+  #65605C 0%, rgba(95,129,163,0.50) 100%); /* brown */
+  background-size: cover;
+}
+/* title (save, share collaborate) h1 */
+.hero h2 {
+  /*font-size: 40px;*/
+  font-weight: normal;
+  margin-top: 40px;
+  margin-bottom: 40px;
+ }
+  /* company name header text-size is larger than other h1
+  overrides the h1 margin-top attribute listed above */
+#companyname  {
+  /* BLOCBOX: */
+  font-size: 90px;
+  font-weight: normal;
+  margin: 0;
+  font-variant: small-caps;
+  color: #FFFFFF; /* white */
+  line-height: 90px;
+ }
+ /* hero paragraph font-size also larger with more space between lines
+ font-weight light  
+ margin to top 10, 0 right/left, 40 on bottom */
+.hero p {
+   /*font-size: 22px;*/
+   line-height: 26px;
+   font-weight: 100;
+   margin: 10px 0 40px;
+ }
+ /* laptop computer image moved down a bit
+ right/left sides to auto (centers it), bottom margin 0 */
+.hero img {
+   display: block;
+   margin-top: 3em;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 0;
+ }
+
+
+ /* BUTTONS */
+ .btn {
+  /*from Sketch....*/
+  /* Rectangle: */
+  background: #B27846; /*orange */
+  box-shadow: 4px 4px 4px 0px #FFFFFF;
+  border-radius: 11px; /* rounded corners */
+  padding: 10px;
+  /* text: Start Your Free Tria: */
+  font-family: BreeSerif-Regular;
+  font-size: 23px;
+  color: #FFFFFF; /* white */
+  line-height: 31px;
+  text-shadow: 2px 2px 4px #2D2B2B; /* near-black */
+  text-decoration: none;
+ }
+
+
+
+
+ /* BENEFITS (a.k.a. features) section */
+.benefits {
+  padding: 40px;
+  color: #ffffff; /* white text */
+  /* hero background information from sketch file (right-click
+    on element name and choose Copy CSS Attributes to copy the 
+    element's attributes) */
+  background: #65605C; /* brown */
+   /* position: relative; */
+  /* display: block; */
+}
+.benefits .container {
+  text-align: center;
+    padding: 5px;
+}
+.benefits i {
+   font-size:60px;
+   margin:0;
+   vertical-align: middle;
+ }
+.benefits table {
+  padding-right: 10px;
+}
+.benefits table td {
+  padding-right: 10px;
+  vertical-align: top;
+}
+.benefits table p {
+  text-align: left;
+}
+.benefits .additionalFeatures {
+  padding-top: 10px;
+  position: relative;
+  background: #65605C; /* brown */
+  overflow: hidden;
+  text-align: center;
+}
+.benefits .additionalFeatures:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    background-image: url("../images/office.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+
+
+/* PRICING */
+.pricing {
+  padding: 40px;
+}
+.pricing .pricingInfo {
+  text-align: center;
+}
+.pricing h3 {
+  /* plan name */
+  color: #B27846;
+  text-shadow: 1px 1px #ffffff;
+ }
+.pricing .container {
+  padding: 20px;
+}
+ .pricing .box p {
+  /* dollar sign of price is only part without span */
+  color: #2D2B2B; /* near-black */
+  font-size: 20px;
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  vertical-align: top;
+ }
+  .pricing .box .cost {
+  /* price number should be large*/
+  font-size: 40px;
+ }
+ .pricing .box .month {
+  /* price part "/month" should be smaller */
+  font-size: 18px;
+ }
+
+ .pricing li {
+   color: #FFFFFF; /* white */
+ }
+
+ .pricing ul {
+   margin:0 auto;
+   padding:2em 0;
+ }
+ .pricing ul li {
+   list-style-type: none;
+ }
+
+
+ .box {
+   margin-top: 10px; /* white space between boxes */
+   padding-left: 10px; /* space between box edge and text */
+/* from example video:
+   box-shadow: 0px 12px 4px 0px rgba(0,0,0,0.20);*/
+   position: relative;
+   min-height: 100px;
+/* from sketch: price box: */
+  background: #88ABB2; /* light teal */
+  box-shadow: 4px 4px 4px 0px #B27846; /*orange */
+
+ }
+.pricing td {
+    width:25%;
+    text-align: left;
+  }
+.pricing h2 {
+  text-align: center;
+}
+.pricing .small {
+   font-size: 12px;
+   line-height: 15px;
+   text-align: center;
+ }
+
+
+
+
+
+
+/* TESTIMONIALS SECTION */
+/* Background color Mask: */
+.testimonials {
+  padding: 4em 0; /* 4em top and bottom */
+  text-align: center;
+  color: #ffffff; /* white text */
+  /* background */
+  background: #435F65 url("../images/testimonials-background.png") 
+  top center no-repeat; /* teal  */
+  /* gradient */
+  background: url("../images/testimonials-background.png") 
+  top center no-repeat linear-gradient(45deg, 
+  #65605C 0%, rgba(95,129,163,0.50) 100%); /* brown */
+  background-size: cover;
+}
+ .testimonials blockquote {
+   font-style: italic;
+   background: #FFFFFF; /* WHITE */
+   position: relative;
+   padding: 30px;
+   color:  #435F65; /* teal */
+   width: auto;
+   margin: 0;
+   border-radius: 30px;
+ }
+ /* pseudo class used for triangle at bottom of blockquote bubble */
+ /* http://apps.eky.hk/css-triangle-generator/ */
+ .testimonials blockquote:after {
+   top: 100%;
+   left: 13%;
+   border: solid transparent;
+   content: " "; /* empty content */
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border-top-color: #FFFFFF; /* white, same as background */
+   border-width: 10px;
+   margin-left: -10px;
+ }
+  .testimonials img {
+   height: 65px;
+   width: 65px;
+   border-radius: 50%; /* circle */
+   float: left; /* to the left in the column */
+   display: inline-block; /* image and text side-by-side */
+   margin-top: 10px;
+   margin-right: 10px;
+   margin-left: 6px;
+ }
+  .testimonials p.name {
+   float: left;
+   display: inline-block; /* image and text side-by-side */
+   text-align: left;
+   font-size: 14px;
+   margin-top: 25px;
+ }
+/* DOCUMENT COLORS:
+  #B27846 orange 
+  #2D2B2B near-black
+  #435F65 teal
+  #FFFFFF white
+  #65605C brown
+  #88ABB2 light teal
+   */
+
+
+
+
+
+
+/* REMINDER TO SIGN UP SECTION */
+.remindersignup {
+  padding:40px;
+  text-align: center;
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+  color: #ffffff; /* white text */
+  /* hero background information from sketch file (right-click
+    on element name and choose Copy CSS Attributes to copy the 
+    element's attributes) */
+background: #65605C; /* brown */
+}
+.middle-footer-block {
+    text-align: center;
+}
+.right-footer-block {
+    text-align: right;
+}
