@@ -18,29 +18,50 @@
  </head>
 
 
- <body>
-<header>
+<body>
 
-<!-- Nav Bar: first half is logo. second half is Sign In/Out links -->
+<header>
+<!-- HEADER
+ Nav Bar: first third is logo. middle third is links, last third is Sign In/Out links -->
   <nav class="container">
-    <div class="one-half">
+    <div class="one-third">
       <a href="index.html" class="site-logo"><img src="images/logo.png" alt="Blocbox Logo" /></a>
     </div>
-    <div class="one-half">
-      <ul>
+    <div class="one-third">
+      <ul class="top-nav-links">
+        <li><a href="#benefits">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+      </ul>
+      </div>
+    <div class="one-third">
+      <ul class="sign-in-out">
         <li><a href="SignIn.html">Sign In</a></li>
         <li class="btn-outline"><a href="SignUp.html">Sign Up</a></li>
       </ul>
       </div>
     </nav>
+</header>
 
 
-<!-- Hero 
-  Centered: heading, subheading, sign up button, laptop image -->
-  <div class="container hero">
+
+
+
+<main role="main">
+
+<!-- HERO -->
+<section class="hero">
+<!-- Top Center: Company Name
+Left: heading, subheading, sign up button
+Right: laptop image -->
+  <div class="container">
     <h1 id="companyname" class="animated fadeIn">Blocbox</h1>
+  </div>
+
+  <div class="container">
     <div class="one-half">
-      <h1>Save, Share, Collaborate</h1>
+      <h2>Save, Share, Collaborate</h2>
       <p>Save notes, images, and links.
       <br/>Share your work with others.
       <br/>Collaborate on team projects.</p>
@@ -51,26 +72,25 @@
     </div>
   </div>
 
-</header>
+</section>
 
 
 
 
 
-<main role="main">
 
-<!-- BENEFITS Features 
-  first half are add items, second half is an image 
+
+<!-- BENEFITS / Features -->
+<a id="benefits"></a>
+<section class="benefits">
+<!--  first half are add items, second half is an image 
   second section is the additional items
   -->
-<section class="benefits">
-
-
-<div class="mainFeatures"><!-- main features columns-->
+<div class="container"><!-- main features section with two halves -->
   <div class="one-half">
-    <table class="BenefitsCenterAlign">
+    <table>
     <tr>
-      <td class="fifteen-percent">
+      <td class="fifteen-percent centerAlign">
         <i class="fa fa-file-o"></i>
         <h3>Create notes</h3>
       </td>
@@ -103,19 +123,19 @@
 </div><!--end right half-->
 </div><!--end main features columns-->
 
-<div class="container">
+<div class="container"><!--additional features secton -->
 <div class="additionalFeatures"><!--four columns-->
   <div class="one-quarter">
     <i class="fa fa-group"></i>
     <h3>Share with collaborators</h3></div>
   <div class="one-quarter">
-  <i class="fa fa-inbox"></i>
+    <i class="fa fa-inbox"></i>
     <h3>Organize into boxes</h3></div>
   <div class="one-quarter">
-  <i class="fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
     <h3>Assign favorites</h3></div>
   <div class="one-quarter">
-  <i class="fa fa-tag"></i>
+    <i class="fa fa-tag"></i>
     <h3>Assign tags</h3></div>
 </div><!--end additional features section-->
 </div>
@@ -131,24 +151,28 @@
 <!-- PRICING 
   first half is image, second half is three tiers
   -->
+  <a id="pricing"></a>
 <section class="pricing">
-  <div class="container centeralign">
+
+  <div class="container pricingInfo"><!-- 1st container part -->
     <h2>How much does Blocbox cost?</h2>
     <p>We have many options to fit your needs. It's free to try out for 30 days and you can always change your plan once you've signed up. Here are the different features of each plan:</p>
     <a href="SignUp.html" class="btn">Start Your Free Trial</a>
   </div>
 
-  <div class="container">
+  <div class="container"><!-- 2nd container part -->
   <div class="one-half">image<!--img src="images/computer.jpg"--></div>
   <div class="one-half">
     <div class="box"><table><tr>
-      <td><h3>CASUAL</h3><h2>FREE</h2></td>
+      <td><h3>CASUAL</h3>
+      <p><span class="cost">free</span></p></td>
       <td><ul><li>Up to 5 boxes</li>
         <li>Up to 10 collaborators</li>
         <li>2GB of storage</li></ul></td></tr></table>
       </div>
       <div class="box"><table><tr>
-      <td><h3>PROFESSIONAL</h3><h2>$5/month</h2></td>
+      <td><h3>PROFESSIONAL</h3>
+      <p>$<span class="cost">5</span><span class="month">/month<span class="small">*</span></span></p></td>
       <td>
         <ul><li>Unlimited boxes</li>
         <li>Up to 20 collaborators</li>
@@ -159,7 +183,8 @@
       <div class="box">
     <table>
     <tr>
-      <td><h3>EXPERT</h3><h2>$10/month</h2></td>
+      <td><h3>EXPERT</h3>
+      <p>$<span class="cost">10</span><span class="month">/month<span class="small">*</span></span></p></td>
       <td>
         <ul><li>Unlimited boxes</li>
         <li>Up to 20 collaborators</li>
@@ -168,7 +193,11 @@
       </td></tr>
     </table></div>
   </div><!--end 2nd half-->
-  </div><!--end container-->
+  </div><!--end 2nd container part-->
+
+ <div class="container"><!-- 3rd container part-->
+   <p class="small">*We will not collect your credit card information until your 30-day trial has ended.</p>
+ </div>
 
 </section>
 
@@ -180,8 +209,9 @@
 
 <!-- Testimonials centered
   -->
+<a id="testimonials"></a>
 <section class="testimonials">
-  <div class="container centeralign">
+  <div class="container">
     <h2>Who uses Blocbox?</h2>
     <p>Blocbox has more than 100,000 satisfied users storing and collaborating with teams across the world. Here's what a few have to say:</p>
 </div>
@@ -189,12 +219,10 @@
 <div class="container">
   <div class="one-third "><!-- back triangle --></div>
   <div class="one-third ">
-    <div class="container">
     <blockquote>Blocbox has made it easier to find and keep things I love. I can share with other designers on my team and create new categories with awesome stuff. And creating simple text documents couldn't be easier."</blockquote>
     <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="Stella Avatar" />
     <p class="name"><strong>Stella B.</strong>
     <br/>Freelance designer, North Dakota</p>
-    </div>
   </div>
   <div class="one-third "><!-- forward triangle --></div>
   </div>
