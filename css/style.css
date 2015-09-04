@@ -89,9 +89,7 @@ is at least 992px wide so if the screen is smaller than that
 we won't have any columns
  */
 @media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
+  .container {width: 750px;}
 }
 /* media queries */
 /* if screen is 992px wide or larger (laptops), we change
@@ -144,6 +142,7 @@ header {
     element's attributes) */
   /* Top Nav Rectangle: */
   background: #65605C; /* brown */
+  position: fixed;
 }
 header .one-third {margin-bottom: 5px;}
 /* 1em padding on top and bottom, 0 padding on left and right */
@@ -245,26 +244,30 @@ header nav ul > li.btn-outline:hover > a {
   line-height: 90px;
  }
  /* hero paragraph font-size also larger with more space between lines
- font-weight light  
  margin to top 10, 0 right/left, 40 on bottom */
 .hero p {
    /*font-size: 22px;*/
    line-height: 26px;
    font-weight: 100;
-   margin: 10px 0 40px;
+   margin-top: 10px;
+   margin-right: 10px;
+   margin-bottom:  0;
+   margin-left:  40px;
  }
  /* laptop computer image moved down a bit
  right/left sides to auto (centers it), bottom margin 0 */
-.hero img {
-   display: block;
-   margin-top: 3em;
-   margin-left: auto;
-   margin-right: auto;
-   margin-bottom: 0;
- }
 .hero .laptop-screenshot {
-   display: inline-block;
+  max-width: 90%;
+  clear: left; /* left, right, both, none */
+  float: right; /* left, right, none */
+  position: relative; /* static (default), relative, absolute, fixed */
+  display: block; /* none, inline, block (stretches screen), 
+                   inline-block*/
 }
+.hero img {
+   max-width: 100%;
+   height: auto;
+ }
 
 
 
@@ -326,6 +329,13 @@ header nav ul > li.btn-outline:hover > a {
 .benefits table p {
   text-align: left;
 }
+.benefits .first-pricing-image {
+  max-width: 90%;
+}
+.benefits .first-pricing-image img {
+  max-width: 100%;
+  height: auto;
+}
 .benefits .additionalFeatures {
   padding-top: 10px;
   position: relative;
@@ -372,6 +382,13 @@ header nav ul > li.btn-outline:hover > a {
  }
 .pricing .container {
   padding: 20px;
+}
+.pricing .pricing-image {
+  max-width: 90%;
+}
+.pricing img {
+  max-width: 100%;
+  height: auto;
 }
  .pricing .box p {
   /* dollar sign of price is only part without span */
