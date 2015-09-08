@@ -137,12 +137,18 @@ http://www.websitedimensions.com/ */
 /* HEADER */
 header {
   color: #FFFFFF; /* white text */
+  position: fixed; /* this keeps the header bar 
+                            at the top of the screen (but behind
+                            stuff) */
+  z-index: 10; /* layer level of object, higher # the higher object */
+  width: 100%;
   /* information from sketch file (right-click
     on element name and choose Copy CSS Attributes to copy the 
     element's attributes) */
   /* Top Nav Rectangle: */
   background: #65605C; /* brown */
-  position: fixed;
+  
+
 }
 header .one-third {margin-bottom: 5px;}
 /* 1em padding on top and bottom, 0 padding on left and right */
@@ -215,22 +221,22 @@ header nav ul > li.btn-outline:hover > a {
   text-align: center;
   color: #ffffff; /* white text */
   padding: 4em 0; /* 4em top and bottom */
-  display: block;
-  position: relative;
+  /* display: block;
+  position: relative; */
   background: #435F65 url("../images/HeroBackground.jpg") 
-  top center no-repeat; /* teal */
+    top center no-repeat; /* teal */
   /* gradient */
   background: url("../images/HeroBackground.jpg") top
-  center no-repeat linear-gradient(45deg, 
-  #65605C 0%, rgba(95,129,163,0.50) 100%); /* brown */
+    center no-repeat linear-gradient(45deg, 
+    #65605C 0%, rgba(95,129,163,0.50) 100%); /* brown */
   background-size: cover;
 }
 /* title (save, share collaborate) h1 */
 .hero h2 {
   /*font-size: 40px;*/
   font-weight: normal;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2em;
+  margin-bottom: 2em;
  }
   /* company name header text-size is larger than other h1
   overrides the h1 margin-top attribute listed above */
@@ -239,37 +245,35 @@ header nav ul > li.btn-outline:hover > a {
   font-size: 90px;
   font-weight: normal;
   margin: 0;
+  padding-top: 0.5em;
   font-variant: small-caps;
   color: #FFFFFF; /* white */
-  line-height: 90px;
+  line-height: 1em;
  }
  /* hero paragraph font-size also larger with more space between lines
  margin to top 10, 0 right/left, 40 on bottom */
 .hero p {
    /*font-size: 22px;*/
-   line-height: 26px;
-   font-weight: 100;
-   margin-top: 10px;
-   margin-right: 10px;
-   margin-bottom:  0;
-   margin-left:  40px;
+   line-height: 1.5em;
+   margin-top: 2em;
+   margin-bottom:  2em;
+   margin-right: 2em;
+   margin-left:  2em;
  }
  /* laptop computer image moved down a bit
  right/left sides to auto (centers it), bottom margin 0 */
 .hero .laptop-screenshot {
   max-width: 90%;
-  clear: left; /* left, right, both, none */
-  float: right; /* left, right, none */
-  position: relative; /* static (default), relative, absolute, fixed */
-  display: block; /* none, inline, block (stretches screen), 
-                   inline-block*/
 }
 .hero img {
    max-width: 100%;
    height: auto;
  }
-
-
+/*
+.hero .triangle, .hero .laptop {
+  float: left;
+}
+*/
 
 
 
@@ -281,7 +285,7 @@ header nav ul > li.btn-outline:hover > a {
   background: #B27846; /*orange */
   box-shadow: 4px 4px 4px 0px #FFFFFF; /* white */
   border-radius: 11px; /* rounded corners */
-  padding: 10px;
+  padding: 10px; /* space between rectangle edge and text */
   /* text: Start Your Free Tria: */
   font-family: BreeSerif-Regular;
   font-size: 23px;
@@ -337,7 +341,7 @@ header nav ul > li.btn-outline:hover > a {
   height: auto;
 }
 .benefits .additionalFeatures {
-  padding-top: 10px;
+  padding-top: 1.5em;
   position: relative;
   background: #65605C; /* brown */
   overflow: hidden;
@@ -351,15 +355,11 @@ header nav ul > li.btn-outline:hover > a {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 1; /* will be on top of background */
   opacity: 0.3;
   background-image: url("../images/office.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
   background-size: cover;
 }
 
