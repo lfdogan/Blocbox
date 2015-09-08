@@ -133,35 +133,36 @@ http://www.websitedimensions.com/ */
 }
 
 
+
+
+
+
+
+ /* DASHBOARD */
+ .dashboard {
+   background: #F7F7F7;
+ }
+
+
+
 /* HEADER */
 header {
   color: #FFFFFF; /* white text */
   position: fixed; /* this keeps the header bar 
                             at the top of the screen (but behind
                             stuff) */
-  z-index: 10; /* layer level of object, higher # the higher object */
   width: 100%;
   /* information from sketch file (right-click
     on element name and choose Copy CSS Attributes to copy the 
     element's attributes) */
   /* Top Nav Rectangle: */
+  height: 80px;
+  z-index: 10; /* layer level of object, higher # the higher object */
   background: #65605C; /* brown */
   height: 60px;
-  }
-header a {
-  text-decoration: none;
-  color:#ffffff;
-  }
-header .settings img {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%; /* circle */
-  float: left; /* location in the column */
-  display: inline-block; /* image and text side-by-side */
-  margin-right: 10px;
-  margin-left: 6px;
- }
-
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 /* User's Avatar */
 header .settings img {
    height:35px;
@@ -186,6 +187,11 @@ header .settings a {
    margin-right:10px;
    margin-top:8px;
  }
+ /* sign out */
+header a {
+  text-decoration: none;
+  color:#ffffff;
+  }
 
 
 
@@ -199,45 +205,24 @@ header .settings a {
   background: #88ABB2; /* light teal */
   box-shadow: 4px 4px 4px 0px #B27846; /* orange */
   border-radius: 11px; /* rounded corners */
-  padding: 10px; /* space between rectangle edge and text */
+  padding: 5px; /* space between rectangle edge and text */
   /* text: Start Your Free Tria: */
   font-family: BreeSerif-Regular;
-  font-size: 23px;
+  font-size: 18px;
   color: #2D2B2B; /* near-black */
-  line-height: 31px;
+  line-height: 20px;
   text-decoration: none;
  }
 
 
- /* DASHBOARD */
- .dashboard {
-   background: #F7F7F7;
- }
-
-
-   .contents-header {
-     padding: 1.5em 1%;
-     float: right;
-     width: 90%;
-     position: relative;
-   }
-/* 
-<div class="container">
-  <div class="contents-header">
-    <p>View</p><i class="fa fa-th"></i><i class="fa fa-reorder"></i>
-    <a href="#" class="btn">Add an Item</a>
-  </div>
-</div>
-
-
- */
 
 
 
-/* left nav rectangle
-won't appear on mobile devices */
+/* LEFT NAVIGATION
+ rectangle. won't appear on mobile devices */
  .left-nav {
-     padding-top: 60px;
+   padding-top: 80px;
+   z-index: 6;
    height: 100vh; /* vertical height. spans top and bottom of
                     browser no matter how big */
    width: 14.66666667%;
@@ -283,38 +268,27 @@ won't appear on mobile devices */
    border-radius: 50%;
    display: inline-block; /* display next to the <p> */
  }
-
-
-
-/* contents heading */
-.contents-header {
-  display: inline-block;
-  margin: auto;
+.left-nav li.active {
+  background-color: #B27846; /* orange  */
 }
 
 
 
-/* content */
+
+
+/* CONTENT */
  .content {
-   padding: 6em 1% 1.5em;
+   padding-top: 1.5em;
+   margin-top: 80px;
+   padding-left: 1%;
+   padding-right: 1%;
+   padding-bottom: 1.5em;
    float: right; /* stick to right side */
    width: 98%; /* creating mobile first */
    position: relative;
  }
- .content .header {
-   margin:0 1% 20px;
- }
-  .content .header h1 {
-   font-family: "Pontano", Helvetica, Arial, sans-serif;
-   margin: 0 0 30px;
-   font-size: 36px;
-   line-height: 44px;
-   float: left;
-   display: inline-block;
- }
-  .content .header > a {
-   float: center; /* button stay */
- }
+
+
  /* each box spacing */
   .content-item {
    width: 96%;
@@ -372,9 +346,9 @@ won't appear on mobile devices */
 
  /* Larger Mobile Devices */
  /* 2 columns: ; 50% wide each */
- @media (min-width:460px) {
+@media (min-width:460px) {
    .content {
-     padding: 1.5em 1%;
+     padding: 1.5em 5%;
      float: right;
      width: 90%;
      position: relative;
@@ -385,6 +359,7 @@ won't appear on mobile devices */
      float: left;
      display: block;
    }
+
  }
 
  /* Tablets */
