@@ -109,27 +109,21 @@ screens 992px or larger
 /* if screen is 1200px wide or larger (desktops), we change
 the container class to 1170 wide */
 @media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+  .container {width: 1170px;}
 }
 /* media queries */
 /* if screen is 1920px wide or larger, we change
 the container class to 1885px wide
 http://www.websitedimensions.com/ */
 @media (min-width: 1920px) {
-  .container {
-    width: 1885px;
-  }
+  .container {width: 1885px;}
 }
 /* media queries */
 /* if screen is 2560px wide or larger, we change
 the container class to 2525px wide
 http://www.websitedimensions.com/ */
 @media (min-width: 2560px) {
-  .container {
-    width: 2525px;
-  }
+  .container {width: 2525px;}
 }
 
 
@@ -159,7 +153,6 @@ header {
   height: 80px;
   z-index: 10; /* layer level of object, higher # the higher object */
   background: #65605C; /* brown */
-  height: 60px;
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -221,8 +214,7 @@ header a {
 /* LEFT NAVIGATION
  rectangle. won't appear on mobile devices */
  .left-nav {
-   padding-top: 80px;
-   z-index: 6;
+
    height: 100vh; /* vertical height. spans top and bottom of
                     browser no matter how big */
    width: 14.66666667%;
@@ -375,8 +367,8 @@ header a {
      width:700px; /* rather than earlier mentioned 750px */
    }
    .content-item {
-     width:31.33333%; /* 1% + 31.33333% + 1% = 33.3333% (3 equal columns) */
-     margin:0 1% 25px; /* bottom margin 25px */
+     width: 31.33333%; /* 1% + 31.33333% + 1% = 33.3333% (3 equal columns) */
+     margin: 0 1% 25px; /* bottom margin 25px */
    }
  }
 

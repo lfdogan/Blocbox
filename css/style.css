@@ -220,7 +220,7 @@ header nav ul > li.btn-outline:hover > a {
 .hero {
   text-align: center;
   color: #ffffff; /* white text */
-  padding: 4em 0; /* 4em top and bottom */
+  padding: 4em 0; /* 4em top/bottom, 0 left/right*/
   /* display: block;
   position: relative; */
   background: #435F65 url("../images/HeroBackground.jpg") 
@@ -233,47 +233,93 @@ header nav ul > li.btn-outline:hover > a {
 }
 /* title (save, share collaborate) h1 */
 .hero h2 {
-  /*font-size: 40px;*/
-  font-weight: normal;
   margin-top: 2em;
   margin-bottom: 2em;
  }
-  /* company name header text-size is larger than other h1
+/* company name header text-size is larger than other h1
   overrides the h1 margin-top attribute listed above */
 #companyname  {
   /* BLOCBOX: */
   font-size: 90px;
-  font-weight: normal;
   margin: 0;
   padding-top: 0.5em;
   font-variant: small-caps;
-  color: #FFFFFF; /* white */
   line-height: 1em;
  }
  /* hero paragraph font-size also larger with more space between lines
  margin to top 10, 0 right/left, 40 on bottom */
 .hero p {
-   /*font-size: 22px;*/
    line-height: 1.5em;
    margin-top: 2em;
    margin-bottom:  2em;
    margin-right: 2em;
    margin-left:  2em;
  }
- /* laptop computer image moved down a bit
- right/left sides to auto (centers it), bottom margin 0 */
-.hero .laptop-screenshot {
-  max-width: 90%;
-}
 .hero img {
    max-width: 100%;
    height: auto;
  }
-/*
-.hero .triangle, .hero .laptop {
-  float: left;
+.hero .laptop-screenshot img{
+  max-width: 90%;
 }
-*/
+.hero .triangle {
+  font-size: 60px;
+  color: #B27846;
+  text-shadow: 2px 2px 4px #ffffff; /* white */
+}
+@media (min-width: 640px) { /* iphone4&5 no columns*/
+.hero .triangle {
+  font-size: 60px;
+  color: #65605C; /* brown */
+  }
+}
+
+
+@media (min-width: 992px) { /* columns */
+.hero .triangle {
+  font-size: 60px;
+  color: #2D2B2B; /* near-black */
+  /* only first triangle fits on line. second is below*/
+  }
+}
+
+@media (min-width: 1200px) {
+.hero .triangle {
+  font-size: 60px;
+  color: #435F65; /* teal */
+  /* fits correctly*/
+  }
+}
+
+@media (min-width: 1920px) {
+.hero .triangle {
+  font-size: 60px;
+  color: #FFFFFF; /* white */
+    /* fits correctly*/
+  }
+}
+@media (min-width: 2560px) {
+.hero .triangle {
+  font-size: 60px;
+  color: #65605C; /* brown */
+  /* my monitor isn't this big. I have to zoom out once */
+  }
+}
+
+
+/* DOCUMENT COLORS:
+  #B27846 orange 
+  #2D2B2B near-black
+  #435F65 teal
+  #FFFFFF white
+  #65605C brown
+  #88ABB2 light teal
+   */
+
+
+
+
+
 
 
 
