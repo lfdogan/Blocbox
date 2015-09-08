@@ -249,7 +249,7 @@ won't appear on mobile devices */
    display: block; /* We don't need to set block as our
              display property because CSS chooses block by default. */
  }
-/* spacin on right and left side*/
+/* spacing on right and left side */
  .left-nav .items {
    padding:0 6%;
  }
@@ -286,6 +286,11 @@ won't appear on mobile devices */
 
 
 
+/* contents heading */
+.contents-header {
+  display: inline-block;
+  margin: auto;
+}
 
 
 
@@ -308,7 +313,7 @@ won't appear on mobile devices */
    display: inline-block;
  }
   .content .header > a {
-   float: right; /* button stay to right */
+   float: center; /* button stay */
  }
  /* each box spacing */
   .content-item {
@@ -326,7 +331,41 @@ won't appear on mobile devices */
    position: relative;
    overflow: hidden; /* overflow content is hidden, cropped within border */
    padding:20px;
+ } 
+
+ /* images take up entire item box */
+ .item-box > img {
+   position: absolute;
+   height: 100%;
+   width: auto;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 3;
+ } 
+ /* title of items */
+ .item-box h3 {
+   font-family: 'BreeSerif-Regular', serif;
+   font-size: 15px;
+   line-height: 17px;
+   margin: 0;
+   z-index: 4; /* on top of full box images */
+   position: absolute;
  }
+ /* favicons */
+ .item-box h3 img {
+   width:16px;
+   height:16px;
+   position:relative;
+ }
+ /* Note body and Link description*/
+  .item-box p {
+   font-size: 14px;
+   line-height: 18px;
+   margin-top: 1.5em; /* from top of box */
+ }
+
+
 
 
 
