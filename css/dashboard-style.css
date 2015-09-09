@@ -5,6 +5,8 @@
   #FFFFFF white
   #65605C brown
   #88ABB2 light teal
+  font-family: 'Bree Serif', serif;
+  font-family: 'Pontano Sans', sans-serif;
    */
 
 
@@ -17,11 +19,11 @@ html, body {
 }
 
 body {
-  font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Pontano Sans', sans-serif;
   color: #65605C; /* brown text */
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bree Serif', serif;
+  font-family: 'Bree Serif', serif;
 }
 
 h2 {
@@ -166,19 +168,21 @@ header .header-block {
   margin-right: 2%;
   margin-left: 2%;
 }
+/* LOGO */
 header .block-one {
   padding-top: 20px;
 }
+/* page title */
 header .block-two {
   text-align: left;
   margin-bottom: 11px;
 }
+/* avatar and user's name */
 header .block-three {
   text-align: right;
-  margin-top: 30px;
+  margin-top: 10px;
 }
-/* header-block-three
-User's Avatar */
+/* User's Avatar */
 header .block-three img {
    height: 35px;
    width: 35px;
@@ -198,13 +202,15 @@ header .block-three p {
  }
 /* header-block-three
  Link for User's Name + Avatar */
+ /* style and location of button within container in dropit.css */
 header .block-three a {
-  color:#FFFFFF;
-  text-decoration: none;
-  text-align: right;
-  float: right;
-  margin-bottom: 20px;
-  padding-bottom: 0;
+  color: #FFFFFF; /* white text */
+  text-decoration: none; /* removes underline between avatar & name */
+  text-align: center; /* affects text of drop-down box */
+  float: right;  /* affects height of clickable space & background hover */
+  margin-bottom: 1px; /* affects height of drop-down box */
+  padding-bottom: 0px; /* affects height of clickable space
+                            & background hover */
  }
 header .block-three a:hover {
   background: #88ABB2 ; /* light teal */
@@ -260,10 +266,14 @@ we will use a hamburger icon to click menu in/out */
   float: left; /* fix to left side */
   position: absolute;
    /* smooth transition & transform. 280px to the left of the screen */
+   /* Transitions create animation by changing the attributes over 
+       a period of time. */
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+ /* Transform allows us to manipulate the rotation, size, placement, 
+      and more of an element. */
   transform: translate(-280px,0);
     -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
     -o-transform: translate(-280px,0); /** Opera **/
@@ -281,7 +291,7 @@ we will use a hamburger icon to click menu in/out */
      -webkit-transform: translate(0,0); /** Chrome & Safari **/
      -o-transform: translate(0,0); /** Opera **/
      -moz-transform: translate(0,0); /** Firefox **/
-     z-index: 100;
+     z-index: 10;
  }
  .hamburger {
    position:absolute;
@@ -357,7 +367,7 @@ we will have the left navigation menu fixed on screen */
    text-align: center;
    margin-right:8px; /* spacing between edge of icon and text label */
  }
-/* User's Avatar */
+/* collaborator's Avatar */
 .left-nav img {
    height:21px;
    width:21px;
@@ -377,19 +387,35 @@ we will have the left navigation menu fixed on screen */
 
  /* BUTTONS */
  .btn {
-  /*from Sketch....*/
-  /* Rectangle: */
+/* style and location of button within container in dropit.css */
   background: #88ABB2; /* light teal */
   box-shadow: 4px 4px 4px 0px #B27846; /* orange */
   border-radius: 11px; /* rounded corners */
-  padding: 5px; /* space between rectangle edge and text */
-  /* text: Start Your Free Tria: */
-  font-family: BreeSerif-Regular;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 50px; /* space between text and rectangle edge
+                           the only space clickable*/
+  padding-top: 50px; /* space between text and rectangle edge 
+                         the only space clickable*/
+  /* text */
+  font-family: 'Bree Serif', serif;
+  color: #2D2B2B; /* near-black */  
   font-size: 18px;
-  color: #2D2B2B; /* near-black */
   line-height: 20px;
-  text-decoration: none;
+  text-decoration: none; /* removes text underline */  
  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -440,7 +466,6 @@ we will have the left navigation menu fixed on screen */
  } 
  /* title of items */
  .item-box h3 {
-   font-family: 'BreeSerif-Regular', serif;
    font-size: 15px;
    line-height: 17px;
    margin: 0;
@@ -476,6 +501,7 @@ we will have the left navigation menu fixed on screen */
      display: block;
    }
    .left {text-align: right;}
+   .right {margin-top: 0;}
    .content-item {
      width: 46%;  /* box width is 46% of width */
      margin: 0 2% 25px; /* 2% + 46% + 2% = 50%  (2 equal columns) */

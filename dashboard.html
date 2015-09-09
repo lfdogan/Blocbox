@@ -16,15 +16,17 @@
 <!-- cross-browser library to animate elements -->
 <link rel="stylesheet" href="css/animate.css">
 <!-- JQuery plugin -->
-  <link rel="stylesheet" href="css/dropit.css">
+<link rel="stylesheet" href="css/dropit.css" type="text/css">
 <!-- Add favicon to browser tab -->
 <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
  </head>
 
 
 <body class="dashboard">
+
+
    <!-- RESPONSIVE NAV -->
-   <a id="menu" class="hamburger" href="#">&#9776;</a>
+   <a id="hamburger-menu" class="hamburger" href="#">&#9776;</a>
 
 
 <header>
@@ -34,18 +36,28 @@ top navigation -->
 <div id="top-nav" class="top-nav">
 
   <div class="header-block block-one">
-   <a href="#" class="site-logo"><img src="images/logo.png" /></a>
+    <a href="#" class="site-logo"><img src="images/logo.png" /></a>
   </div> 
 
-   <div class="header-block block-two">
-    <h1><i class="fa fa-th"></i> All Items</h1>
-   </div>
+    <div class="header-block block-two">
+      <h1><i class="fa fa-th"></i> All Items</h1>
+    </div>
 
-   <div class="header-block block-three">
-   <div class="settings">
-     <a href="#"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
-     <p>Clark Kent</p></a>
-     <!--<i class="fa fa-cog"></i>-->
+    <div class="header-block block-three">
+    <div class="settings">
+      <!-- class="menu" for dropit.js and dropit.css -->   
+      <ul class="settings-menu">
+        <li>
+          <a href="#">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
+            <p>Clark Kent</p>
+          </a>
+          <!--<i class="fa fa-cog"></i>-->
+          <ul>
+           <li><a href="#"><i class="fa fa-cog"></i> Account Settings and Profile</a></li>
+        </ul>
+      </li>
+    </ul>
   </div></div>
 
   <div class="header-block block-four">
@@ -126,9 +138,11 @@ View Style and Add Content button -->
             <i class="fa fa-reorder"></i>
           </h2>
   </div>
+
   <div class="half right">
-    
-    <ul class="menu">
+  <div class="add-button">
+    <!-- class="menu" for dropit.js and dropit.css -->
+    <ul class="add-item-menu">
       <li>
         <a href="#" class="btn">Add an Item</a>
         <ul>
@@ -138,9 +152,9 @@ View Style and Add Content button -->
         </ul>
       </li>
     </ul>
-  </div>
-
-</div>
+  </div><!-- half right -->
+  </div><!-- add-button -->
+</div><!-- container pre-items -->
 
 
 
@@ -321,13 +335,17 @@ View Style and Add Content button -->
 
 
 <script src="js/jquery-2.1.4.min.js"></script>
+
 <script src="js/dropit.js"></script>
+
 <script type="text/javascript">
-  $(".menu").dropit();
-  $("#menu" ).click(function() {
+  //drop-down box function for the Add an Item and Account Settings:
+  $(".add-item-menu").dropit();
+  $(".settings-menu").dropit();
+  //for the hamburger function:
+  $("#hamburger-menu" ).click(function() {
     $("#left-nav").toggleClass("open", 200); //open, speed of 200ms
-     });
-  </script>
+  });</script>
 
 </body>
 </html>
