@@ -147,8 +147,6 @@ header {
     element's attributes) */
   /* Top Nav Rectangle: */
   background: #65605C; /* brown */
-  
-
 }
 header .one-third {margin-bottom: 5px;}
 /* 1em padding on top and bottom, 0 padding on left and right */
@@ -156,15 +154,31 @@ header .one-third {margin-bottom: 5px;}
 header nav {
    padding: 1em 0;
  }
+@media (min-width: 992px){
+  header .left-header-block{text-align: left;}
+  header .middle-header-block{text-align: center;}
+  header .right-header-block{text-align: right;}
+}
 /* make sign in / sign out links on same line, align the 
 to the right side of screen, links should appear on right side */
 /* affects all unordered lists in all nav elements of header */
 header nav ul {
   display: inline;
-  text-align: right;
-  float: right;
   margin: 0;
 }
+header .middle-header-block {
+  padding: 0;
+  margin: 0;
+}
+header .middle-header-block ul >li{
+   list-style-type: none;
+   display: inline-block;
+   margin: 0;
+}
+header .middle-header-block ul > li a:hover {
+   background: #B27846; /* orange */
+ }
+
 /* parent unordered list.
 removes bullets for sign in / sign out
 makes them on same line 
@@ -172,7 +186,7 @@ with space between them */
 /* 0 margin on top and bottom, 15px margin on left and right */
 /* affecting all list items that are direct (first rather than all)
 children of all unordered lists in the nav of header*/
-header nav ul > li {
+header .right-header-block ul > li {
    list-style-type: none;
    display: inline-block;
    margin: 0 15px;
@@ -206,6 +220,9 @@ header nav ul > li.btn-outline:hover > a {
    /* example video    color: #34495E */
   color: #2D2B2B; /* near-black */
  }
+
+
+
 
 
 
@@ -653,28 +670,30 @@ footer .right-footer-block {
   text-align: center;
   display: block;
  }
+ footer .middle-footer-block ul > li a:hover {
+   background: #B27846; /* orange */
+ }
 /* media query for screens at least 992 pixels wide: */
 @media (min-width: 992px){
-  /* gradient 
-    first color is bottom of third box
-    second color is top of third box
-    third color is bottom of first/second box
-    fourth color is top of first/second box */
   footer{
     background-color: #65605C; /* brown */
     height: 100px;
    }
-   /* paragraph (copyright info) and 
-  navigation unordered list (center links)
-  become left aligned */
-  footer p, footer nav ul{
+  /* paragraph (copyright info) become left aligned */
+  footer .left-footer-block {
     padding: 2em 0;
     text-align: left;
-  }
-/* logo: */
+    }
+  /* navigation unordered list (center links) become left aligned */
+  footer .middle-footer-block {
+    padding: 2em 0;
+    text-align: center;
+    }
+
+  /* logo: */
   footer .right-footer-block{
     text-align: right;
     display: block;
-    vertical-align: center;
+    padding-top: 1em;
    }
- }
+}
