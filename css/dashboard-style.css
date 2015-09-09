@@ -156,7 +156,15 @@ header {
   padding-bottom: 0;
   margin-bottom: 0;
 }
-/* User's Avatar */
+header .header-block-one {
+  padding-top: 20px;
+}
+header .header-block-two {
+  text-align: left;
+  margin-bottom: 11px;
+}
+/* header-block-three
+User's Avatar */
 header .settings img {
    height:35px;
    width:35px;
@@ -164,23 +172,29 @@ header .settings img {
    margin-left:10px;
    display: inline-block; /* display next to the User's Name */
  }
- /* User's Name */
+/* header-block-three
+User's Name */
 header .settings p {
    display: inline-block;
    vertical-align: top;
    padding-top: 8px; /* bump down slightly */
    margin:0 0 0 10px; /* remove margins */
  }
- /* Link for User's Name + Avatar */
+/* header-block-three
+ Link for User's Name + Avatar */
 header .settings a {
    color:#FFFFFF;
    text-decoration: none;
    text-align: right;
    float: right;
-   margin-right:10px;
-   margin-top:8px;
+   margin-top: 30px;
  }
- /* sign out */
+header .header-block-four {
+  text-align: right;
+  margin-top: 35px;
+}
+/* header-block-four
+sign out */
 header a {
   text-decoration: none;
   color:#ffffff;
