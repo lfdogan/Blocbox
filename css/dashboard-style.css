@@ -156,10 +156,10 @@ header {
   padding-bottom: 0;
   margin-bottom: 0;
 }
-header .header-block-one {
+header .block-one {
   padding-top: 20px;
 }
-header .header-block-two {
+header .block-two {
   text-align: left;
   margin-bottom: 11px;
 }
@@ -189,7 +189,7 @@ header .settings a {
    float: right;
    margin-top: 30px;
  }
-header .header-block-four {
+header .block-four {
   text-align: right;
   margin-top: 35px;
 }
@@ -200,28 +200,32 @@ header a {
   color:#ffffff;
   }
 
-
-
-
-
-
- /* BUTTONS */
- .btn {
-  /*from Sketch....*/
-  /* Rectangle: */
-  background: #88ABB2; /* light teal */
-  box-shadow: 4px 4px 4px 0px #B27846; /* orange */
-  border-radius: 11px; /* rounded corners */
-  padding: 5px; /* space between rectangle edge and text */
-  /* text: Start Your Free Tria: */
-  font-family: BreeSerif-Regular;
-  font-size: 18px;
-  color: #2D2B2B; /* near-black */
-  line-height: 20px;
-  text-decoration: none;
- }
-
-
+header .header-block {
+  width: 96%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  margin-top: 0;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+@media (max-width:700px) {
+  header .settings p {display:none;}
+  }
+@media (max-width: 991px) {
+  header .block-one img {
+    max-width: 100%;
+    height: auto;  }
+  header .block-two {display:none;}
+  header .header-block {width:29.3333%;}
+  .left-nav .items {margin-top: 160px;}
+  .content {margin-top: 160px;}
+}
+@media (min-width: 992px) {
+  header .header-block {width: 21%;}
+  .left-nav .items {margin-top: 90px;}
+  .content {margin-top: 90px;}
+}
 
 
 
@@ -282,17 +286,42 @@ header a {
 
 
 
+
+
+
+ /* BUTTONS */
+ .btn {
+  /*from Sketch....*/
+  /* Rectangle: */
+  background: #88ABB2; /* light teal */
+  box-shadow: 4px 4px 4px 0px #B27846; /* orange */
+  border-radius: 11px; /* rounded corners */
+  padding: 5px; /* space between rectangle edge and text */
+  /* text: Start Your Free Tria: */
+  font-family: BreeSerif-Regular;
+  font-size: 18px;
+  color: #2D2B2B; /* near-black */
+  line-height: 20px;
+  text-decoration: none;
+ }
+
+
+
 /* CONTENT */
- .content {
+.content {
+  margin-top: 25px;
    padding-top: 1.5em;
-   margin-top: 80px;
+   padding-bottom: 1.5em;
    padding-left: 1%;
    padding-right: 1%;
-   padding-bottom: 1.5em;
    float: right; /* stick to right side */
    width: 98%; /* creating mobile first */
    position: relative;
  }
+ 
+.content .pre-items {display: inline;}
+
+
 
 
  /* each box spacing */
@@ -348,17 +377,19 @@ header a {
 
 
 
-
-
  /* Larger Mobile Devices */
  /* 2 columns: ; 50% wide each */
 @media (min-width:460px) {
    .content {
-     padding: 1.5em 5%;
-     float: right;
      width: 90%;
-     position: relative;
    }
+   .half {
+     width: 46%;  /* box width is 46% of width */
+     margin: 0 2% 0; /* 2%left + 46% + 2%right = 50%  (2 equal columns) */
+     float: left;
+     display: block;
+   }
+   .left {text-align: right;}
    .content-item {
      width: 46%;  /* box width is 46% of width */
      margin: 0 2% 25px; /* 2% + 46% + 2% = 50%  (2 equal columns) */
@@ -372,13 +403,13 @@ header a {
  /* 3 columns of items 33.3333% wide each */
  @media (min-width:768px) {
    .content {
-     padding: 1.5em 5%;
-     float: right;
      width: 90%;
-     position: relative;
    }
    .content > .container {
-     width:700px; /* rather than earlier mentioned 750px */
+     width: 700px; /* rather than earlier mentioned 750px */
+   }
+   .content > .pre-items {
+     width: 700px; /* rather than earlier mentioned 750px */
    }
    .content-item {
      width: 31.33333%; /* 1% + 31.33333% + 1% = 33.3333% (3 equal columns) */
@@ -390,13 +421,13 @@ header a {
 /* 4 columns of items 25% wide each */
  @media (min-width:992px) {
    .content {
-     padding: 1.5em 1%;
-     float: right;
      width: 83.33333333%; /* matched with left-hand navigation */
-     position: relative;
    }
    .content > .container {
-     width:auto;
+     width: auto;
+   }
+   .content > .pre-items {
+     width: auto;
    }
    .content-item {
      width: 23%;
