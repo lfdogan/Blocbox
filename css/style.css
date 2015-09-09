@@ -276,7 +276,6 @@ header nav ul > li.btn-outline:hover > a {
     font-size: 60px;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    color: #2D2B2B; /* near-black */
   }
 }
 
@@ -292,7 +291,6 @@ header nav ul > li.btn-outline:hover > a {
     font-size: 60px;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    color: #2D2B2B; /* near-black */
   }
 }
 @media (min-width: 1201px) { 
@@ -574,7 +572,6 @@ header nav ul > li.btn-outline:hover > a {
   font-size: 60px;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  color: #2D2B2B; /* near-black */
     /* only first triangle fits on line. second is below*/
   }
 }
