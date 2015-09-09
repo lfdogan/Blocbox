@@ -267,44 +267,38 @@ header nav ul > li.btn-outline:hover > a {
   color: #B27846;
   text-shadow: 2px 2px 4px #ffffff; /* white */
 }
-@media (min-width: 640px) { /* iphone4&5 no columns*/
-.hero .triangle {
-  font-size: 60px;
-  color: #65605C; /* brown */
+@media (max-width: 550px) { /* minimum chrome width on my desktop is 385px */
+  .hero .laptop-screenshot .triangle {
+    display: none;
+  }
+  .hero .alternate-triangles .triangle {
+    display:inline;
+    font-size: 60px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: #2D2B2B; /* near-black */
   }
 }
 
-
-@media (min-width: 992px) { /* columns */
-.hero .triangle {
-  font-size: 60px;
-  color: #2D2B2B; /* near-black */
-  /* only first triangle fits on line. second is below*/
+@media (min-width: 551px) and (max-width: 991px) {
+  .hero .alternate-triangles {display:none;}
+}
+@media (min-width: 992px) and (max-width: 1200px) { /* columns */
+  .hero .laptop-screenshot .triangle {
+    display: none;
   }
+  .hero .alternate-triangles .triangle {
+    display:inline;
+    font-size: 60px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: #2D2B2B; /* near-black */
+  }
+}
+@media (min-width: 1201px) { 
+  .hero .alternate-triangles {display:none;}
 }
 
-@media (min-width: 1200px) {
-.hero .triangle {
-  font-size: 60px;
-  color: #435F65; /* teal */
-  /* fits correctly*/
-  }
-}
-
-@media (min-width: 1920px) {
-.hero .triangle {
-  font-size: 60px;
-  color: #FFFFFF; /* white */
-    /* fits correctly*/
-  }
-}
-@media (min-width: 2560px) {
-.hero .triangle {
-  font-size: 60px;
-  color: #65605C; /* brown */
-  /* my monitor isn't this big. I have to zoom out once */
-  }
-}
 
 
 /* DOCUMENT COLORS:
@@ -510,20 +504,6 @@ header nav ul > li.btn-outline:hover > a {
   #65605C 0%, rgba(95,129,163,0.50) 100%); /* brown */
   background-size: cover;
 }
-.testimonials .back-triangle img {
-  height: 35px;
-  width: 35px;
-  float: right; /* location in the column */
-  margin-top: 100px;
-  margin-right: 10px;
- }
- .testimonials .next-triangle img {
-  height: 35px;
-  width: 35px;
-  float: left; /* location in the column */
-  margin-top: 100px;
-  margin-left: 10px;
- }
  .testimonials blockquote {
   font-style: italic;
   background: #FFFFFF; /* WHITE */
@@ -566,7 +546,41 @@ header nav ul > li.btn-outline:hover > a {
   font-size: 14px;
   margin-top: 25px;
  }
-
+ .testimonials .back-triangle img {
+  height: 35px;
+  width: 35px;
+  float: right; /* location in the column */
+  margin-top: 100px;
+  margin-right: 10px;
+ }
+ .testimonials .next-triangle img {
+  height: 35px;
+  width: 35px;
+  float: left; /* location in the column */
+  margin-top: 100px;
+  margin-left: 10px;
+ }
+.testimonials .triangle {
+  font-size: 60px;
+  color: #B27846;
+  text-shadow: 2px 2px 4px #ffffff; /* white */
+}
+@media (max-width: 991px) { /* columns */
+.testimonials .next-triangle, .testimonials .back-triangle {
+  display: none;
+}
+.testimonials .alternate-triangles .triangle {
+  display:inline;
+  font-size: 60px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: #2D2B2B; /* near-black */
+    /* only first triangle fits on line. second is below*/
+  }
+}
+@media (min-width: 992px) {
+  .testimonials .alternate-triangles {display:none;}
+}
 
 
 
