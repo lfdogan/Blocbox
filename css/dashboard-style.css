@@ -156,49 +156,6 @@ header {
   padding-bottom: 0;
   margin-bottom: 0;
 }
-header .block-one {
-  padding-top: 20px;
-}
-header .block-two {
-  text-align: left;
-  margin-bottom: 11px;
-}
-/* header-block-three
-User's Avatar */
-header .settings img {
-   height:35px;
-   width:35px;
-   border-radius: 50%; /* perfect circle */
-   margin-left:10px;
-   display: inline-block; /* display next to the User's Name */
- }
-/* header-block-three
-User's Name */
-header .settings p {
-   display: inline-block;
-   vertical-align: top;
-   padding-top: 8px; /* bump down slightly */
-   margin:0 0 0 10px; /* remove margins */
- }
-/* header-block-three
- Link for User's Name + Avatar */
-header .settings a {
-   color:#FFFFFF;
-   text-decoration: none;
-   text-align: right;
-   float: right;
-   margin-top: 30px;
- }
-header .block-four {
-  text-align: right;
-  margin-top: 35px;
-}
-/* header-block-four
-sign out */
-header a {
-  text-decoration: none;
-  color:#ffffff;
-  }
 
 header .header-block {
   width: 96%;
@@ -209,6 +166,56 @@ header .header-block {
   margin-right: 2%;
   margin-left: 2%;
 }
+header .block-one {
+  padding-top: 20px;
+}
+header .block-two {
+  text-align: left;
+  margin-bottom: 11px;
+}
+header .block-three {
+  text-align: right;
+  margin-top: 30px;
+}
+/* header-block-three
+User's Avatar */
+header .block-three img {
+   height: 35px;
+   width: 35px;
+   border-radius: 50%; /* perfect circle */
+   margin-left: 10px;
+   display: inline-block; /* display next to the User's Name */
+ }
+/* header-block-three
+User's Name */
+header .block-three p {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 8px; /* bump down slightly */
+  margin-top: 0; /* remove margins */
+  margin-left: 0; /* remove margins */
+  margin-right: 0; /* remove margins */
+ }
+/* header-block-three
+ Link for User's Name + Avatar */
+header .block-three a {
+  color:#FFFFFF;
+  text-decoration: none;
+  text-align: right;
+  float: right;
+  padding-bottom: 20px;
+ }
+header .block-four {
+  text-align: right;
+  margin-top: 35px;
+}
+/* header-block-four
+sign out */
+header .block-four a {
+  text-decoration: none;
+  color: #ffffff;
+  }
+
 @media (max-width:700px) {
   header .settings p {display:none;}
   }
