@@ -203,7 +203,13 @@ header .block-three a {
   text-decoration: none;
   text-align: right;
   float: right;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+ }
+header .block-three a:hover {
+  background: #88ABB2 ; /* light teal */
+  color: #2D2B2B; /* near-black */
+  border-radius: 4px;
  }
 header .block-four {
   text-align: right;
@@ -215,6 +221,11 @@ header .block-four a {
   text-decoration: none;
   color: #ffffff;
   }
+header .block-four a:hover {
+  background: #88ABB2 ; /* light teal */
+  color: #2D2B2B; /* near-black */
+  border-radius: 4px;
+ }
 
 @media (max-width:700px) {
   header .settings p {display:none;}
@@ -236,10 +247,62 @@ header .block-four a {
 
 
 
-/* LEFT NAVIGATION
- rectangle. won't appear on mobile devices */
- .left-nav {
+/* LEFT NAVIGATION */
 
+/* FOR DEVICES LESS THAN 992 PIXELS WIDE
+we will use a hamburger icon to click menu in/out */
+.left-nav {
+  height: 100%; /* full height of browser */
+  width: 280px;
+  color: #FFFFFF; /* white text */
+  background: #435F65;  /* teal */
+  background-image: linear-gradient(35deg, #65605C 0%, #435F65 94%);
+  float: left; /* fix to left side */
+  position: absolute;
+   /* smooth transition & transform. 280px to the left of the screen */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: translate(-280px,0);
+    -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+    -o-transform: translate(-280px,0); /** Opera **/
+    -moz-transform: translate(-280px,0); /** Firefox **/
+ }
+ /* smooth transition & transform. 280px to the left of the screen */
+ .left-nav.open {
+   display:block;
+   width:280px;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+     z-index: 100;
+ }
+ .hamburger {
+   position:absolute;
+   z-index: 1000;
+   background: #65605C; /* brown */
+   color: #FFFFFF; /* WHITE */
+   text-decoration: none;
+   font-size: 22px;
+   padding: 10px 15px;
+   border-radius: 4px;
+   left: 5px;
+   top: 100px;
+ }
+
+
+
+/* FOR DEVICES AT LEAST 992 PIXELS WIDE
+we will NOT use the hamburger icon to click left navigation menu in/out 
+we will have the left navigation menu fixed on screen */
+@media (min-width: 992px) {
+ .left-nav {
    height: 100vh; /* vertical height. spans top and bottom of
                     browser no matter how big */
    width: 14.66666667%;
@@ -250,7 +313,23 @@ header .block-four a {
    position: fixed; /* stays in position */
    display: block; /* We don't need to set block as our
              display property because CSS chooses block by default. */
- }
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/   
+  }
+  .left-nav.open {
+     width:14.66666667%;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+  .hamburger { /* hide hamburger icon since left navigation is displayed */
+     display:none;
+   }
+}
+
 /* spacing on right and left side */
  .left-nav .items {
    padding:0 6%;

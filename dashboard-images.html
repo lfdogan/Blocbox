@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
  <html lang="en-us">
  <head>
    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -15,13 +15,16 @@
 <link rel="stylesheet" href="css/font-awesome.css">
 <!-- cross-browser library to animate elements -->
 <link rel="stylesheet" href="css/animate.css">
+<!-- JQuery plugin -->
+  <link rel="stylesheet" href="css/dropit.css">
 <!-- Add favicon to browser tab -->
 <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
  </head>
 
 
 <body class="dashboard">
-
+   <!-- RESPONSIVE NAV -->
+   <a id="menu" class="hamburger" href="#">&#9776;</a>
 
 
 <header>
@@ -30,22 +33,22 @@
 top navigation -->
 <div id="top-nav" class="top-nav">
 
-   <div class="one-quarter">
-        <a href="#" class="site-logo"><img src="images/logo.png" /></a>
+  <div class="header-block block-one">
+   <a href="#" class="site-logo"><img src="images/logo.png" /></a>
+  </div> 
+
+   <div class="header-block block-two">
+    <h1><i class="fa fa-th"></i> All Items</h1>
    </div>
 
-   <div class="one-quarter">
-    <h1><i class="fa fa-picture-o"></i> All Images</h1>
-   </div>
-
-   <div class="one-quarter">
+   <div class="header-block block-three">
    <div class="settings">
      <a href="#"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
      <p>Clark Kent</p></a>
      <!--<i class="fa fa-cog"></i>-->
   </div></div>
 
-  <div class="one-quarter sign-out">
+  <div class="header-block block-four">
       <a href="#"><i class="fa fa-sign-out"></i> Sign Out</a>
   </div>
   
@@ -56,21 +59,24 @@ top navigation -->
 
 
 
+ 
+
+
+
 
 
 
 <!-- left navigation -->
+
+
+
 <nav id="left-nav" class="left-nav">
-
-
-
-
 
 
      <div class="items">
        <p>Items</p>
        <ul>
-          <li><a href="dashboard.html"><i class="fa fa-th"></i> All Items</a></li>
+         <li><a href="dashboard.html"><i class="fa fa-th"></i> All Items</a></li>
          <li><a href="#"><i class="fa fa-file-o"></i> Notes</a></li>
          <li class="active"><a href="dashboard-images.html"><i class="fa fa-picture-o"></i> Images</a></li>
          <li><a href="#"><i class="fa fa-link"></i> Links</a></li>
@@ -121,28 +127,21 @@ View Style and Add Content button -->
           </h2>
   </div>
   <div class="half right">
-    <a href="#" class="btn">Add an Item</a>
+    
+    <ul class="menu">
+      <li>
+        <a href="#" class="btn">Add an Item</a>
+        <ul>
+          <li><a href="#"><i class="fa fa-file-o"></i> Note</a></li>
+          <li><a href="#"><i class="fa fa-picture-o"></i> Image</a></li>
+          <li><a href="#"><i class="fa fa-link"></i> Link</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 
 </div>
 
-<!-- 
-View Style and Add Content button 
-works well enough
-<div class="container">
-
-  <div class="content-item view-add">
-            <h2>View
-            <i class="fa fa-th"></i>
-            <i class="fa fa-reorder"></i>
-          </h2>
-  </div>
-  <div class="content-item view-add">
-    <a href="#" class="btn">Add an Item</a>
-  </div>
-
-</div>
--->
 
 
 <div class="container">
@@ -275,6 +274,15 @@ works well enough
 
 
 
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/dropit.js"></script>
+<script type="text/javascript">
+  $(".menu").dropit();
+  $("#menu" ).click(function() {
+    $("#left-nav").toggleClass("open", 200); //open, speed of 200ms
+     });
+  </script>
 
 </body>
 </html>

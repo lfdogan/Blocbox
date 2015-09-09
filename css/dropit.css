@@ -1,0 +1,76 @@
+/*
+ * Dropit v1.1.0
+ * http://dev7studios.com/dropit
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+/* These styles assume you are using ul and li */
+
+/* DOCUMENT COLORS & fonts:
+  #B27846 orange 
+  #2D2B2B near-black
+  #435F65 teal
+  #FFFFFF white
+  #65605C brown
+  #88ABB2 light teal
+  'Bree Serif' for headings
+  'Pontano Sans' for body text
+   */
+
+.dropit {
+  list-style: none;
+	padding: 0;
+	margin: 15px 0 0;
+  float: left;
+  display: inline-block;
+}
+.dropit .dropit-trigger { 
+  position: relative; 
+}
+.dropit .dropit-submenu {
+  position: absolute;
+  top: 100%;
+  right: 0; /* dropdown left or right */
+  z-index: 1000;
+  display: none;
+  min-width: 100px;
+  list-style: none;
+	padding: 20px;
+	margin: 20px 0 0;
+}
+/*  the drop-down pop-up box */
+.dropit .dropit-open .dropit-submenu { 
+   display: block;
+   background: #88ABB2; /* light teal */
+   box-shadow: 4px 4px 4px 0px #B27846; /* orange */
+   border-radius: 4px;
+     }
+/* the triangle */
+ .dropit .dropit-open .dropit-submenu:after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 8px 8px;
+  border-color: #88ABB2 transparent; /* light teal */
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -8px;
+  right: 10px;
+ }
+  .dropit .dropit-open .dropit-submenu li {
+  display: block;
+  margin-bottom: 20px;
+ }
+ /* set margin of bottom to last link. remove extra padding/margin*/
+  .dropit .dropit-open .dropit-submenu li:last-child {
+  margin-bottom: 0px;
+ }
+  .dropit .dropit-open .dropit-submenu li a {
+  color: #2D2B2B; /* near-black */
+  text-decoration: none;
+  font-family: BreeSerif-Regular, Helvetica, Arial, sans-serif;
+ }
