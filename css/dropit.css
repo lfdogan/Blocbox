@@ -24,14 +24,30 @@
 .dropit {
   list-style: none;
 	padding: 0;
-	margin-top: 5px;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
-  float: left; /* or right */
-  display: inline-block;
+ /* position: static|absolute|fixed|relative|
+                       initial|inherit; */
+  display: inline-block; /* display: inline|block|flex|
+                            inline-block|inline-flex|inline-table|
+                            list-item|run-in|table (several)|
+                            none|initial|inherit */
 }
+/* location of User's Settings  */
+.settings .dropit {
+  float: right;   /* float: none|left|right|initial|inherit; */
+  margin-top: 5px; /* adds space above click button */
+} 
+/* location of AddAnItem  */
+.pre-items .dropit {
+  float: none; /* on left inside its element */
+  margin-top: 0; /* adds space above button */
+} 
+
+
 .dropit .dropit-trigger {   position: relative; }
+
 .dropit .dropit-submenu {
   position: absolute;
   top: 100%;
@@ -40,9 +56,21 @@
   display: none; /* don't display until it has been clicked */
   min-width: 100px;
   list-style: none;
-	padding: 20px;
-	margin: 20px 0 0;
+  padding: 10px;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  font-size: 16px;    
+  font-family: 'Bree Serif', serif;
+  line-height: 16px; 
 }
+.settings .dropit-submenu {
+  margin-top: 50px; /* space between button and top of triangle */
+}
+.pre-items .dropit-submenu {
+  margin-top: 19px; /* space between button and top of triangle */
+}
+
 /*  the drop-down pop-up box */
 .dropit .dropit-open .dropit-submenu { 
    display: block;

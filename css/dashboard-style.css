@@ -26,18 +26,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Bree Serif', serif;
 }
 
-h2 {
-  font-weight: normal;
-  margin-bottom: 5px;
-}
 
-p {
-  line-height: 19px;
-  font-weight: 100;
-}
 
 /* grid */
 /* center content */
+/* more info later, check @media for different screen sizes */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -65,7 +58,9 @@ using a clearfix hack to help with spacing each
 }
 
 /* grid */
-/* provide 2% padding on left and right margins for all */
+/* set column classes all equal to 96% wide. this will be different
+    later when we set @media for screen size min width */
+/* provide 2% margin space between text and border on left and right */
 /* columns are set to float left which pushes them to the left side,
 allowing other columns in the section to wrap around */
 .one-half, .one-third, .one-quarter {
@@ -174,24 +169,25 @@ header .header-block {
 }
 /* LOGO */
 header .block-one {
-  padding-top: 20px;
+  margin-top: 17px;
 }
 /* page title */
+header h1 { margin:0; }
 header .block-two {
   text-align: left;
-  margin-bottom: 11px;
+  margin-top: 15px;
 }
 /* avatar and user's name */
 header .block-three {
   text-align: right;
-  margin-top: 10px;
+  margin-top: 16px; /* space above avatar & user's name */
 }
 /* User's Avatar */
 header .block-three img {
    height: 35px;
    width: 35px;
    border-radius: 50%; /* perfect circle */
-   margin-left: 10px;
+   margin: 0;  /* space between border and image*/
    display: inline-block; /* display next to the User's Name */
  }
 /* header-block-three
@@ -200,9 +196,7 @@ header .block-three p {
   display: inline-block;
   vertical-align: top;
   padding-top: 8px; /* bump down slightly */
-  margin-top: 0; /* remove margins */
-  margin-left: 0; /* remove margins */
-  margin-right: 0; /* remove margins */
+  margin: 0; /* remove margins */
  }
 /* header-block-three
  Link for User's Name + Avatar */
@@ -212,9 +206,8 @@ header .block-three a {
   text-decoration: none; /* removes underline between avatar & name */
   text-align: center; /* affects text of drop-down box */
   float: right;  /* affects height of clickable space & background hover */
-  margin-bottom: 1px; /* affects height of drop-down box */
-  padding-bottom: 0px; /* affects height of clickable space
-                            & background hover */
+  margin: 0; /* increases drop-down box AND location of avatar/name */
+  padding: 0; /* affects height of clickable space & background hover */
  }
 header .block-three a:hover {
   background: #88ABB2 ; /* light teal */
@@ -223,7 +216,7 @@ header .block-three a:hover {
  }
 header .block-four {
   text-align: right;
-  margin-top: 35px;
+  margin-top: 29px;
 }
 /* header-block-four
 sign out */
@@ -389,23 +382,75 @@ we will have the left navigation menu fixed on screen */
 
 
 
- /* BUTTONS */
- .btn {
+/* CONTENT */
+.content { /* children: "pre-items" and "container" */
+  margin-top: 50px; /* whitespace from top. (header is 80px tall) */
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 98%; /* creating mobile first, this changes with MediaQueries */
+  float: right; /* stick to right side */
+                 /* float: none|left|right|initial|inherit; */
+  position: relative; /* position: static(default)|absolute|fixed|
+                         relative|initial|inherit; 
+                         use with left:#px and top:#px for position */
+ }
+
+ /*P RE-ITEMS: View Tiles, View List, Add an Item */
+ /*container*/
+.pre-items { /* children: "half left" and "half right" */
+  margin-right: auto;
+  margin-left: auto;
+  /* background: #B2FFB2; /* green */
+  padding: 0;
+  /* border: 1px solid black; */
+  margin-top: 10px; /* whitespace above border */
+  /* height is auto */
+  /* if overflow:hidden; content is cropped within border */
+  
+}
+.half {
+  width: 46%;  /* box width is 46% of parent element's available space */
+  margin-left: 1%;
+  margin-right: 1%; /* 1+46+1=48% so it can fit 2 half elements per row */
+  /* background: #FFCCFF; /* pink*/ */
+  padding: 5px; /* space between border and inside element */
+  /* border: 1px solid black; */
+  margin-top: 0; /* whitespace above each half's border */
+  margin-bottom: 10px; /* whitespace below each half's border */ 
+  /* height is auto */
+  display: inline-block;
+  font-size: 20px;    
+  font-family: 'Bree Serif', serif;
+  line-height: 18px; 
+}
+.left {
+  text-align: right;
+}
+.inside {
+  /* background: #FFFF94; /* yellow */
+  padding-right: 1em; /* space between border and inside element */
+  padding-bottom: 0;
+  /* border: 1px solid black; */
+  margin-top: 10px;/* whitespace around border */
+  margin-bottom: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  /* height is auto */
+ }
+/* Add an Item button */
 /* style and location of button within container in dropit.css */
+.btn {
   background: #88ABB2; /* light teal */
   box-shadow: 4px 4px 4px 0px #B27846; /* orange */
   border-radius: 11px; /* rounded corners */
   padding-left: 6px;
   padding-right: 6px;
-  padding-bottom: 50px; /* space between text and rectangle edge
-                           the only space clickable*/
-  padding-top: 50px; /* space between text and rectangle edge 
-                         the only space clickable*/
+  padding-bottom: 5px; /* space between text and rectangle edge */
+  padding-top: 5px; /* space between text and rectangle edge */
   /* text */
-  font-family: 'Bree Serif', serif;
   color: #2D2B2B; /* near-black */  
-  font-size: 18px;
-  line-height: 20px;
   text-decoration: none; /* removes text underline */  
  }
 
@@ -413,52 +458,24 @@ we will have the left navigation menu fixed on screen */
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* CONTENT */
-.content {
-  margin-top: 25px;
-   padding-top: 1.5em;
-   padding-bottom: 1.5em;
-   padding-left: 1%;
-   padding-right: 1%;
-   float: right; /* stick to right side */
-   width: 98%; /* creating mobile first */
-   position: relative;
+/* each box spacing for mobile only. 
+    check out @media for larger screens */
+.content-item {
+  width: 96%;
+  margin: 0 2% 25px; /* 96% width + 2% right + 2% left = 100% width */
+  float: left;
+  display: block;
  }
- 
-.content .pre-items {
-  padding: 40px;
-}
-
-
-
-
- /* each box spacing */
-  .content-item {
-   width: 96%;
-   margin: 0 2% 25px; /* 96% width + 2% right + 2% left = 100% width */
-   float: left;
-   display: block;
- }
- /* white outlined boxes (inside box spacing) with slight drop shadow */
-  .item-box {
-   display: block;
-   height: 230px;
-   background: #FFFFFF;
-   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.40); /* alpha layer 40% */
-   position: relative;
-   overflow: hidden; /* overflow content is hidden, cropped within border */
-   padding:20px;
- } 
+/* white outlined boxes (inside box spacing) with slight drop shadow */
+.item-box {
+  display: block;
+  height: 230px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.40); /* alpha layer 40% */
+  position: relative;
+  overflow: hidden; /* overflow content is hidden, cropped within border */
+  padding:20px;
+} 
 
  /* images take up entire item box */
  .item-box > img {
@@ -500,13 +517,6 @@ we will have the left navigation menu fixed on screen */
    .content {
      width: 90%;
    }
-   .half {
-     width: 46%;  /* box width is 46% of width */
-     margin: 0 2% 0; /* 2%left + 46% + 2%right = 50%  (2 equal columns) */
-     display: block;
-   }
-   .left {text-align: right;}
-   .right {margin-top: 0;}
    .content-item {
      width: 46%;  /* box width is 46% of width */
      margin: 0 2% 25px; /* 2% + 46% + 2% = 50%  (2 equal columns) */
@@ -525,9 +535,6 @@ we will have the left navigation menu fixed on screen */
    .content > .container {
      width: 700px; /* rather than earlier mentioned 750px */
    }
-   .content > .pre-items {
-     width: 700px; /* rather than earlier mentioned 750px */
-   }
    .content-item {
      width: 31.33333%; /* 1% + 31.33333% + 1% = 33.3333% (3 equal columns) */
      margin: 0 1% 25px; /* bottom margin 25px */
@@ -541,9 +548,6 @@ we will have the left navigation menu fixed on screen */
      width: 83.33333333%; /* matched with left-hand navigation */
    }
    .content > .container {
-     width: auto;
-   }
-   .content > .pre-items {
      width: auto;
    }
    .content-item {
