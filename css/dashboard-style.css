@@ -346,6 +346,9 @@ we will have the left navigation menu fixed on screen */
    font-size: 12px;
    line-height: 15px;
  }
+ .left-nav a:hover {
+    background: #88ABB2; /* light teal */
+  }
  .left-nav .items ul {
    margin:0 0 40px; /* remove some margins, add more */
    padding:0; /* so it doesn't space out too far*/
@@ -425,9 +428,28 @@ we will have the left navigation menu fixed on screen */
   font-family: 'Bree Serif', serif;
   line-height: 18px; 
 }
-.left {
+/* LEFT-PRE-ITEM contains View, Tiles Icon, List Icon */
+.left-pre-item {
   text-align: right;
 }
+.left-pre-item p {
+  color: #435F65; /*teal*/
+  margin: 0;
+}
+.left-pre-item a {
+  color: #435F65; /*teal*/
+  text-decoration: none;
+  }
+/*.left-pre-item a.active {
+background: #B27846; /* orange 
+  }*/
+.left-pre-item a.inactive {
+  color: #65605C; /*brown*/
+  text-decoration: none;
+  }
+.left-pre-item a:hover.inactive {
+    background: #88ABB2; /* light teal */
+  }
 .inside {
   /* background: #FFFF94; /* yellow */
   padding-right: 1em; /* space between border and inside element */
