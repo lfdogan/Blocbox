@@ -50,13 +50,17 @@ p {
 /* pseudo elements add a table before and after 
 using a clearfix hack to help with spacing each 
 "container" appropriately */
-.container:before, .container:after {
+.item-section:before {
+  content: " ";
+  display: table;
+}
+.item-section:after {
   content: " ";
   display: table;
 }
 
 /* grid */
-.container:after {
+.item-section:after {
   clear:both;
 }
 
@@ -431,7 +435,9 @@ we will have the left navigation menu fixed on screen */
    position: relative;
  }
  
-.content .pre-items {display: inline;}
+.content .pre-items {
+  padding: 40px;
+}
 
 
 
@@ -497,7 +503,6 @@ we will have the left navigation menu fixed on screen */
    .half {
      width: 46%;  /* box width is 46% of width */
      margin: 0 2% 0; /* 2%left + 46% + 2%right = 50%  (2 equal columns) */
-     float: left;
      display: block;
    }
    .left {text-align: right;}
